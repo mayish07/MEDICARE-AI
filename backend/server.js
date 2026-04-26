@@ -18,50 +18,46 @@ const paymentRoutes = require('./routes/paymentRoutes');
 
 const app = express();
 
-// Connect to MongoDB first, then start server
 const startServer = async () => {
-  try {
-    await connectDB();
-    console.log('Database connected successfully');
-  } catch (error) {
-    console.error('Database connection failed:', error.message);
-  }
+  await connectDB();
 
   app.use(helmet());
-app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173'
-}));
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+  app.use(cors({
+    origin: process.env.CLIENT_URL || 'http://localhost:5173'
+  }));
+  app.use(morgan('dev'));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  message: 'Too many requests, please try again later'
-});
-app.use('/api', limiter);
+  const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: 'Too many requests, please try again later'
+  });
+  app.use('/api', limiter);
 
-app.use('/api/auth', authRoutes);
-app.use('/api/hospitals', hospitalRoutes);
-app.use('/api/doctors', doctorRoutes);
-app.use('/api/appointments', appointmentRoutes);
-app.use('/api/ai', aiRoutes);
-app.use('/api/health-records', healthRecordRoutes);
-app.use('/api/payment', paymentRoutes);
+  app.use('/api/auth', authRoutes);
+  app.use('/api/hospitals', hospitalRoutes);
+  app.use('/api/doctors', doctorRoutes);
+  app.use('/api/appointments', appointmentRoutes);
+  app.use('/api/ai', aiRoutes);
+  app.use('/api/health-records', healthRecordRoutes);
+  app.use('/api/payment', paymentRoutes);
 
-app.get('/api/health', (req, res) => {
-  res.json({ success: true, message: 'MediCare AI API is running', timestamp: new Date().toISOString() });
-});
+  app.get('/api/health', (req, res) => {
+    res.json({ success: true, message: 'MediCare AI API is running', timestamp: new Date().toISOString() });
+  });
 
-app.use(errorMiddleware.notFound);
-app.use(errorMiddleware.errorHandler);
+  app.use(errorMiddleware.notFound);
+  app.use(errorMiddleware.errorHandler);
 
-const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 5000;
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+};
+
+startServer();
 
 module.exports = app;
