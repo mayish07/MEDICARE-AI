@@ -7,7 +7,9 @@ import Footer from '../components/Footer';
 import DoctorCard from '../components/DoctorCard';
 import SkeletonCard from '../components/SkeletonCard';
 import { doctors as doctorData } from '../data/doctors';
-import { SPECIALIZATIONS, CITY } from '../utils/helpers';
+import { SPECIALIZATIONS } from '../utils/helpers';
+
+const CITIES = ['Mangalore', 'Bangalore', 'Hyderabad', 'Chennai'];
 
 const DoctorsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -41,7 +43,7 @@ const DoctorsPage = () => {
       <div className="pt-24 pb-12 container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <h1 className="text-3xl font-heading font-bold mb-2">Doctors</h1>
-          <p className="text-gray-500">Find the best doctors in Mangalore & Bangalore</p>
+          <p className="text-gray-500">Find the best doctors across India</p>
         </motion.div>
 
         <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -63,8 +65,7 @@ const DoctorsPage = () => {
                 <label className="block text-sm font-medium mb-2">City</label>
                 <select value={city} onChange={e => setCity(e.target.value)} className="w-full p-3 border border-gray-200 dark:border-gray-700 rounded-lg dark:bg-gray-800">
                   <option value="">All Cities</option>
-                  <option value={CITY.MANGALORE}>Mangalore</option>
-                  <option value={CITY.BANGALORE}>Bangalore</option>
+                  {CITIES.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </div>
               <div>

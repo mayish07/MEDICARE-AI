@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { 
   Stethoscope, Activity, Heart, Pill, Calendar, FileText, 
   MessageCircle, Phone, MapPin, Clock, Star, CheckCircle, AlertCircle,
@@ -13,13 +12,10 @@ import DoctorCard from '../components/DoctorCard';
 import { hospitals } from '../data/hospitals';
 import { doctors } from '../data/doctors';
 import { useAuth } from '../hooks/useAuth';
-import { CITY } from '../utils/helpers';
 
 const HeroSection = () => {
   const { user } = useAuth();
-  const navigate = useNavigate();
-  const [city, setCity] = useState(() => localStorage.getItem('selectedCity') || CITY.MANGALORE);
-  const titles = [`for ${city.charAt(0).toUpperCase() + city.slice(1)}`, 'for Mangalore', 'for Bangalore'];
+  const titles = ['for You', 'India-wide', '24/7'];
   const [titleIndex, setTitleIndex] = useState(0);
 
   useEffect(() => {
@@ -50,7 +46,7 @@ const HeroSection = () => {
               <span className="text-warning">{titles[titleIndex]}</span>
             </h1>
 
-            <p className="text-lg text-white/80 mb-8 max-w-lg">Book appointments at KMC, Manipal, Fortis & more. AI symptom checker. Health records. All in one place.</p>
+            <p className="text-lg text-white/80 mb-8 max-w-lg">Book appointments at top hospitals. AI symptom checker. Health records. All in one place.</p>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/symptom-checker" className="px-6 py-3 bg-white text-primary font-bold rounded-card hover:shadow-xl transition-shadow flex items-center gap-2">

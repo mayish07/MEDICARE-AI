@@ -9,6 +9,8 @@ import SkeletonCard from '../components/SkeletonCard';
 import { hospitals as hospitalData } from '../data/hospitals';
 import { hospitals as apiHospitals } from '../utils/api';
 
+const CITIES = ['Mangalore', 'Bangalore', 'Hyderabad', 'Chennai'];
+
 const HospitalsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const storedCity = localStorage.getItem('selectedCity') || 'Mangalore';
@@ -40,12 +42,12 @@ const HospitalsPage = () => {
       <div className="pt-24 pb-12 container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <h1 className="text-3xl font-heading font-bold mb-2">Hospitals</h1>
-          <p className="text-gray-500">Find the best hospitals in Mangalore & Bangalore</p>
+          <p className="text-gray-500">Find the best hospitals across India</p>
         </motion.div>
 
         <div className="flex flex-col md:flex-row gap-4 mb-8">
-          <div className="flex gap-2">
-            {['Mangalore', 'Bangalore'].map(c => (
+          <div className="flex gap-2 flex-wrap">
+            {CITIES.map(c => (
               <button key={c} onClick={() => handleCityChange(c)} className={`px-6 py-2 rounded-full font-medium transition-colors ${city === c ? 'gradient-btn text-white' : 'bg-gray-100 dark:bg-gray-800'}`}>{c}</button>
             ))}
           </div>

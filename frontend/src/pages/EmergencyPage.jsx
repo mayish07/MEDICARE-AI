@@ -4,11 +4,13 @@ import { Phone, MapPin, Building2, Siren, AlertCircle, ChevronRight, ExternalLin
 import Navbar from '../components/Navbar';
 import { hospitals } from '../data/hospitals';
 
+const CITIES = ['Mangalore', 'Bangalore', 'Hyderabad', 'Chennai'];
+
 const EmergencyPage = () => {
   const [expanded, setExpanded] = useState(null);
+  const [selectedCity, setSelectedCity] = useState('Mangalore');
 
-  const mangaloreHospitals = hospitals.filter(h => h.city === 'Mangalore' && h.emergencyAvailable);
-  const bangaloreHospitals = hospitals.filter(h => h.city === 'Bangalore' && h.emergencyAvailable);
+  const emergencyHospitals = hospitals.filter(h => h.city === selectedCity && h.emergencyAvailable);
 
   const emergencyNumbers = [
     { label: 'Siren', number: '108', color: 'bg-danger' },
@@ -51,45 +53,32 @@ const EmergencyPage = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <h2 className="text-2xl font-heading font-bold mb-6">Mangalore Emergency Hospitals</h2>
-              <div className="space-y-4">
-                {mangaloreHospitals.map(h => (
-                  <div key={h._id} className="glass-card rounded-card p-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-bold">{h.name}</h3>
-                        <p className="text-sm text-gray-500">{h.address}</p>
-                        <a href={`tel:${h.phone}`} className="text-primary flex items-center gap-1 mt-1"><Phone className="w-4 h-4" /> {h.phone}</a>
-                      </div>
-                      <a href={h.googleMapsLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + h.city)}`} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                        <MapPin className="w-5 h-5" />
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          <div className="mb-8">
+            <h2 className="text-2xl font-heading font-bold mb-6">Emergency Hospitals</h2>
+            <div className="flex gap-2 mb-6 flex-wrap">
+              {CITIES.map(city => (
+                <button key={city} onClick={() => setSelectedCity(city)} className={`px-6 py-2 rounded-full font-medium transition-colors ${selectedCity === city ? 'gradient-btn text-white' : 'bg-gray-100 dark:bg-gray-800'}`}>
+                  {city}
+                </button>
+              ))}
             </div>
-
-            <div>
-              <h2 className="text-2xl font-heading font-bold mb-6">Bangalore Emergency Hospitals</h2>
-              <div className="space-y-4">
-                {bangaloreHospitals.map(h => (
-                  <div key={h._id} className="glass-card rounded-card p-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-bold">{h.name}</h3>
-                        <p className="text-sm text-gray-500">{h.address}</p>
-                        <a href={`tel:${h.phone}`} className="text-primary flex items-center gap-1 mt-1"><Phone className="w-4 h-4" /> {h.phone}</a>
-                      </div>
-                      <a href={h.googleMapsLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + h.city)}`} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                        <MapPin className="w-5 h-5" />
-                      </a>
+            <div className="space-y-4">
+              {emergencyHospitals.length > 0 ? emergencyHospitals.map(h => (
+                <div key={h._id} className="glass-card rounded-card p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-bold">{h.name}</h3>
+                      <p className="text-sm text-gray-500">{h.address}</p>
+                      <a href={`tel:${h.phone}`} className="text-primary flex items-center gap-1 mt-1"><Phone className="w-4 h-4" /> {h.phone}</a>
                     </div>
+                    <a href={h.googleMapsLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + h.city)}`} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                      <MapPin className="w-5 h-5" />
+                    </a>
                   </div>
-                ))}
-              </div>
+                </div>
+              )) : (
+                <p className="text-gray-500">No emergency hospitals found in this city</p>
+              )}
             </div>
           </div>
 

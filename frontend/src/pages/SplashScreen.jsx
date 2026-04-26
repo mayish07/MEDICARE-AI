@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Stethoscope, Heart, Activity, Phone, ArrowRight } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
-import { hospitals } from '../data/hospitals';
 import { signInWithGoogle } from '../firebase/config';
 import { useAuth } from '../context/AuthContext';
 
@@ -12,15 +11,10 @@ const SplashScreen = ({ onGetStarted }) => {
   const [features, setFeatures] = useState(0);
 
   const featureList = [
-    { icon: Stethoscope, title: 'Book Appointments', desc: 'Connect with top doctors in Mangalore & Bangalore' },
+    { icon: Stethoscope, title: 'Book Appointments', desc: 'Connect with top doctors in India' },
     { icon: Activity, title: 'AI Symptom Checker', desc: 'Get instant AI analysis of your symptoms' },
     { icon: Heart, title: 'Health Records', desc: 'Store prescriptions, reports securely' },
     { icon: Phone, title: 'Emergency SOS', desc: 'One-tap emergency services' }
-  ];
-
-  const cities = [
-    { name: 'Mangalore', hospitals: 5, image: 'https://images.unsplash.com/photo-1583230387882-298f6c065f74?w=600' },
-    { name: 'Bangalore', hospitals: 5, image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600' }
   ];
 
   useEffect(() => {
@@ -76,20 +70,8 @@ const SplashScreen = ({ onGetStarted }) => {
           </div>
         </div>
 
-        {/* City Selection */}
+        {/* Get Started */}
         <div className="bg-white rounded-t-3xl p-6">
-          <h2 className="text-center font-heading font-bold text-xl mb-4">Select Your City</h2>
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            {cities.map(city => (
-              <button key={city.name} onClick={() => localStorage.setItem('selectedCity', city.name)} className="relative rounded-xl overflow-hidden group">
-                <img src={city.image} alt={city.name} className="w-full h-32 object-cover group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
-                  <h3 className="text-white font-bold text-lg">{city.name}</h3>
-                  <p className="text-white/80 text-sm">{city.hospitals} Hospitals</p>
-                </div>
-              </button>
-            ))}
-          </div>
           <button onClick={() => setShowLogin(true)} className="w-full py-4 gradient-btn rounded-xl font-bold text-lg flex items-center justify-center gap-2">
             Get Started <ArrowRight className="w-5 h-5" />
           </button>
