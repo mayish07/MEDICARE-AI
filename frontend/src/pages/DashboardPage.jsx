@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useMemo, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar, FileText, Activity, MessageCircle, Phone, MapPin, 
@@ -10,6 +10,7 @@ import {
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../hooks/useAuth';
+import { appointments as appointmentsApi } from '../utils/api';
 
 const IconApple = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -40,6 +41,9 @@ const IconLayout = ({ className }) => (
 
 const DashboardPage = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const [appointmentsList, setAppointmentsList] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [weather] = useState({ temp: 28, condition: 'Sunny', humidity: 65 });
   const [bmiState, setBmiState] = useState({ weight: 70, height: 170, result: 24.2, status: 'Normal' });
   const [medReminders, setMedReminders] = useState([
@@ -55,6 +59,25 @@ const DashboardPage = () => {
     { id: 3, title: 'Results Ready', desc: 'Blood test results available', time: '1 day ago', read: false }
   ]);
   const [showNotifications, setShowNotifications] = useState(false);
+
+  useEffect(() => {
+    const fetchAppointments = async () => {
+      try {
+        const response = await appointmentsApi.getAll();
+        setAppointmentsList(response.data.appointments || []);
+      } catch (error) {
+        console.log('No appointments found');
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAppointments();
+  }, []);
+
+  const upcomingCount = appointmentsList.filter(a => a.status === 'Confirmed' || a.status === 'Pending').length;
+  const healthScore = Math.min(100, 85 - (appointmentsList.length * 2));
+  const daysActive = user?.createdAt ? Math.floor((Date.now() - new Date(user.createdAt).getTime()) / (1000 * 60 * 60 * 24)) : 30;
+  const streak = Math.floor(daysActive / 7);
 
   const healthTips = useMemo(() => [
     { icon: Droplets, title: 'Stay Hydrated', tip: 'Drink at least 8 glasses of water daily', color: 'text-blue-500' },
@@ -99,11 +122,11 @@ const DashboardPage = () => {
   ], []);
 
   const stats = useMemo(() => [
-    { label: 'Appointments', value: 3, icon: Calendar, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20' },
-    { label: 'Health Score', value: '85%', icon: Heart, color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20' },
-    { label: 'Days Active', value: 30, icon: Activity, color: 'text-green-500', bg: 'bg-green-50 dark:bg-green-900/20' },
-    { label: 'Streak', value: 7, icon: Award, color: 'text-yellow-500', bg: 'bg-yellow-50 dark:bg-yellow-900/20' }
-  ], []);
+    { label: 'Appointments', value: upcomingCount, icon: Calendar, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', href: '/appointments' },
+    { label: 'Health Score', value: `${healthScore}%`, icon: Heart, color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20', href: '/health-records' },
+    { label: 'Days Active', value: daysActive, icon: Activity, color: 'text-green-500', bg: 'bg-green-50 dark:bg-green-900/20', href: '/profile' },
+    { label: 'Streak', value: streak, icon: Award, color: 'text-yellow-500', bg: 'bg-yellow-50 dark:bg-yellow-900/20', href: '/appointments' }
+  ], [upcomingCount, healthScore, daysActive, streak]);
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -289,7 +312,8 @@ const DashboardPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className={`glass-card rounded-card p-4 hover:shadow-lg transition-shadow ${stat.bg}`}
+                  onClick={() => navigate(stat.href)}
+                  className={`glass-card rounded-card p-4 hover:shadow-lg transition-shadow cursor-pointer ${stat.bg}`}
                 >
                   <div className={`w-10 h-10 rounded-xl ${stat.bg} flex items-center justify-center mb-3`}>
                     <stat.icon className={`w-5 h-5 ${stat.color}`} />
