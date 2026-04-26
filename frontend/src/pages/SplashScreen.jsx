@@ -58,7 +58,10 @@ const SplashScreen = ({ onGetStarted }) => {
 
           {/* Features Carousel */}
           <motion.div key={features} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-white/10 backdrop-blur rounded-2xl p-6 mb-8">
-            <featureList[features].icon className="w-10 h-10 text-white mx-auto mb-2" />
+            {(() => {
+              const Icon = featureList[features].icon;
+              return <Icon className="w-10 h-10 text-white mx-auto mb-2" />;
+            })()}
             <h3 className="text-white font-bold text-xl mb-1">{featureList[features].title}</h3>
             <p className="text-white/70 text-sm">{featureList[features].desc}</p>
           </motion.div>
