@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Building2, Ambulance, AlertCircle, ChevronRight, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, Building2, Siren, AlertCircle, ChevronRight, ExternalLink } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import { hospitals } from '../data/hospitals';
 
@@ -11,7 +11,7 @@ const EmergencyPage = () => {
   const bangaloreHospitals = hospitals.filter(h => h.city === 'Bangalore' && h.emergencyAvailable);
 
   const emergencyNumbers = [
-    { label: 'Ambulance', number: '108', color: 'bg-danger' },
+    { label: 'Siren', number: '108', color: 'bg-danger' },
     { label: 'Police', number: '100', color: 'bg-secondary' },
     { label: 'Fire', number: '101', color: 'bg-orange-500' },
     { label: 'Women Helpline', number: '1091', color: 'bg-pink-500' },
@@ -34,7 +34,7 @@ const EmergencyPage = () => {
         <div className="bg-danger text-white py-16 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <h1 className="text-4xl font-heading font-bold mb-4">🚨 Medical Emergency?</h1>
-            <p className="text-xl mb-6">Call 108 Immediately for Ambulance</p>
+            <p className="text-xl mb-6">Call 108 Immediately for Siren</p>
             <a href="tel:108" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-danger font-bold text-xl rounded-card animate-pulse">Call 108</a>
           </motion.div>
         </div>
