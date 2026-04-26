@@ -1,21 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar, FileText, Activity, MessageCircle, Phone, MapPin, 
-  Clock, Stethoscope, ArrowRight, Plus, User, Heart, Thermometer,
+  Clock, Stethoscope, ArrowRight, Plus, User, Heart,
   Droplets, ChevronRight, Bell, Wind, Moon, Sun, Target, TrendingUp, 
   Award, Video, Scan, X, CheckCircle, Pill
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../hooks/useAuth';
-import { useDarkMode } from '../hooks/useDarkMode';
+
+const AppleIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C8.5 2 5.5 4.5 5 8c.5.5 1 1.5 1 2.5 0 1-.5 2-1 2.5-.5 2 0 4 1.5 5.5 1.5 1.5 3.5 2.5 5.5 2.5s4-1 5.5-2.5c1.5-1.5 2-3.5 1.5-5.5-.5-.5-1-1.5-1-2.5 0-1 .5-2 1-2.5C18.5 4.5 15.5 2 12 2zm-2 5c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1zm4 0c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1z"/>
+  </svg>
+);
+
+const CloudIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+  </svg>
+);
+
+const StarIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+  </svg>
+);
+
+const LayoutIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3" y="3" width="7" height="9" rx="1"/>
+    <rect x="14" y="3" width="7" height="5" rx="1"/>
+    <rect x="14" y="12" width="7" height="9" rx="1"/>
+    <rect x="3" y="16" width="7" height="5" rx="1"/>
+  </svg>
+);
 
 const DashboardPage = () => {
   const { user } = useAuth();
-  const { isDark } = useDarkMode();
-  const [weather, setWeather] = useState({ temp: 28, condition: 'Sunny', humidity: 65 });
+  const [weather] = useState({ temp: 28, condition: 'Sunny', humidity: 65 });
   const [bmi, setBmi] = useState({ weight: 70, height: 170, result: 24.2, status: 'Normal' });
   const [medReminders, setMedReminders] = useState([
     { id: 1, name: 'Vitamin D', time: '8:00 AM', taken: false },
@@ -28,7 +53,7 @@ const DashboardPage = () => {
     { icon: Droplets, title: 'Stay Hydrated', tip: 'Drink at least 8 glasses of water daily', color: 'text-blue-500' },
     { icon: Moon, title: 'Sleep Well', tip: 'Aim for 7-8 hours of sleep', color: 'text-purple-500' },
     { icon: Activity, title: 'Exercise', tip: '30 min of moderate activity', color: 'text-green-500' },
-    { icon: Apple, title: 'Eat Healthy', tip: 'Include fruits & vegetables', color: 'text-orange-500' }
+    { icon: AppleIcon, title: 'Eat Healthy', tip: 'Include fruits & vegetables', color: 'text-orange-500' }
   ]);
   const [quickActions] = useState([
     { icon: Scan, label: 'Scan Reports', color: 'from-blue-500 to-cyan-500', href: '/health-records' },
@@ -61,7 +86,7 @@ const DashboardPage = () => {
 
   const getHealthCondition = () => {
     if (weather.condition === 'Sunny') return { text: 'Good for outdoor activities', icon: Sun };
-    if (weather.condition === 'Cloudy') return { text: 'Stay cautious outdoors', icon: Cloud };
+    if (weather.condition === 'Cloudy') return { text: 'Stay cautious outdoors', icon: CloudIcon };
     return { text: 'Stay indoor if sensitive', icon: Wind };
   };
 
@@ -78,18 +103,6 @@ const DashboardPage = () => {
     else if (bmiValue >= 30) status = 'Obese';
     setBmi({ ...bmi, result: bmiValue, status });
   };
-
-  const Apple = ({ className }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2C8.5 2 5.5 4.5 5 8c.5.5 1 1.5 1 2.5 0 1-.5 2-1 2.5-.5 2 0 4 1.5 5.5 1.5 1.5 3.5 2.5 5.5 2.5s4-1 5.5-2.5c1.5-1.5 2-3.5 1.5-5.5-.5-.5-1-1.5-1-2.5 0-1 .5-2 1-2.5C18.5 4.5 15.5 2 12 2zm-2 5c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1zm4 0c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1z"/>
-    </svg>
-  );
-
-  const Cloud = ({ className }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-    </svg>
-  );
 
   const stats = [
     { label: 'Appointments', value: 3, icon: Calendar, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20' },
@@ -111,13 +124,13 @@ const DashboardPage = () => {
             <div className="glass-card rounded-card p-5 sticky top-24">
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
                 <img 
-                  src={`https://ui-avatars.com/api/?name=${user?.name}&background=00B4D8&color=fff&size=96`} 
-                  alt={user?.name} 
+                  src={`https://ui-avatars.com/api/?name=${user?.name || 'User'}&background=00B4D8&color=fff&size=96`} 
+                  alt="User" 
                   className="w-16 h-16 rounded-2xl shadow-lg" 
                 />
                 <div>
-                  <p className="font-heading font-bold text-lg">{user?.name}</p>
-                  <p className="text-sm text-gray-500">{user?.city}</p>
+                  <p className="font-heading font-bold text-lg">{user?.name || 'User'}</p>
+                  <p className="text-sm text-gray-500">{user?.city || 'City'}</p>
                   <div className="flex items-center gap-1 mt-1">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span className="text-xs text-green-500">Online</span>
@@ -129,7 +142,7 @@ const DashboardPage = () => {
                 <h3 className="font-medium text-sm text-gray-500 mb-3 uppercase tracking-wider">Menu</h3>
                 <nav className="space-y-1">
                   {[
-                    { name: 'Dashboard', icon: LayoutDashboard, active: true },
+                    { name: 'Dashboard', icon: LayoutIcon, active: true },
                     { name: 'Find Doctors', icon: Stethoscope, href: '/doctors' },
                     { name: 'Appointments', icon: Calendar, href: '/appointments' },
                     { name: 'Symptoms', icon: Activity, href: '/symptom-checker' },
@@ -181,7 +194,7 @@ const DashboardPage = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
                 <div>
                   <h1 className="text-3xl font-heading font-bold mb-1">
-                    {getGreeting()}, {user?.name?.split(' ')[0]} 👋
+                    {getGreeting()}, {user?.name?.split(' ')[0] || 'User'} 👋
                   </h1>
                   <p className="text-gray-500">
                     {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
@@ -234,7 +247,7 @@ const DashboardPage = () => {
                     <h2 className="font-heading font-bold text-lg">Quick Actions</h2>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {quickActions.map((action, i) => (
+                    {quickActions.map((action) => (
                       <motion.div key={action.label} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                         <Link 
                           to={action.href}
@@ -465,7 +478,7 @@ const DashboardPage = () => {
                         {doc.distance}
                       </span>
                       <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                        <StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
                         {doc.rating}
                       </span>
                     </div>
@@ -627,21 +640,21 @@ const DashboardPage = () => {
                   <Phone className="w-6 h-6" />
                   <div>
                     <p className="font-bold">Ambulance</p>
-                    <p className="text-sm opacity: 90">102</p>
+                    <p className="text-sm opacity-90">102</p>
                   </div>
                 </a>
                 <a href="tel:108" className="flex items-center gap-4 p-4 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors">
                   <Phone className="w-6 h-6" />
                   <div>
                     <p className="font-bold">Emergency</p>
-                    <p className="text-sm opacity: 90">108</p>
+                    <p className="text-sm opacity-90">108</p>
                   </div>
                 </a>
                 <a href="tel:104" className="flex items-center gap-4 p-4 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors">
                   <Phone className="w-6 h-6" />
                   <div>
                     <p className="font-bold">Medical Help</p>
-                    <p className="text-sm opacity: 90">104</p>
+                    <p className="text-sm opacity-90">104</p>
                   </div>
                 </a>
                 <Link to="/emergency" className="block text-center py-3 gradient-btn rounded-xl font-medium mt-4">
@@ -655,20 +668,5 @@ const DashboardPage = () => {
     </div>
   );
 };
-
-const Star = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-  </svg>
-);
-
-const LayoutDashboard = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="3" y="3" width="7" height="9" rx="1"/>
-    <rect x="14" y="3" width="7" height="5" rx="1"/>
-    <rect x="14" y="12" width="7" height="9" rx="1"/>
-    <rect x="3" y="16" width="7" height="5" rx="1"/>
-  </svg>
-);
 
 export default DashboardPage;
