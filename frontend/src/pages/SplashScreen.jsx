@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Stethoscope, Heart, Activity, Phone, ArrowRight } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { hospitals } from '../data/hospitals';
+import { signInWithGoogle } from '../firebase/config';
 
 const SplashScreen = ({ onGetStarted }) => {
   const [showLogin, setShowLogin] = useState(false);
@@ -101,13 +102,23 @@ const LoginOptions = ({ onBack }) => {
   const { isDark, toggleDark } = useDarkMode();
   const navigate = useNavigate();
   
-  const handleGoogleLogin = () => {
-    // Use Google Identity Services
-    const clientId = "735594895444-38lgudv8fg4ssi0bpsv7o6ok97mtfajc.apps.googleusercontent.com";
-    const redirectUri = `${window.location.origin}/google-callback`;
-    const scope = "email profile";
-    
-    window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&access_type=offline`;
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithGoogle();
+      const user = result.user;
+      const mockUser = {
+        _id: 'google_' + user.uid,
+        name: user.displayName,
+        email: user.email,
+        city: localStorage.getItem('selectedCity') || 'Mangalore'
+      };
+      localStorage.setItem('token', 'google_token_' + user.uid);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+      navigate('/dashboard');
+    } catch (error) {
+      console.error('Google login error:', error);
+      alert('Login failed. Please try again.');
+    }
   };
 
   return (
