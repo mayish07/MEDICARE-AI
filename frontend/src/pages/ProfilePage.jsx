@@ -93,8 +93,10 @@ const ProfilePage = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2">City</label>
                   <select value={form.city} onChange={e => setForm({ ...form, city: e.target.value })} disabled={!editing} className="w-full p-3 border border-gray-200 dark:border-gray-700 rounded-lg dark:bg-gray-800 disabled:opacity-50">
-                    <option value={CITY.MANGALORE}>Mangalore</option>
-                    <option value={CITY.BANGALORE}>Bangalore</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
                   </select>
                 </div>
                 <div>

@@ -83,6 +83,8 @@ const RegisterPage = () => {
               <select value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} className="w-full p-3 border border-gray-200 dark:border-gray-700 rounded-lg dark:bg-gray-800">
                 <option value="Mangalore">Mangalore</option>
                 <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Chennai">Chennai</option>
               </select>
             </div>
 
