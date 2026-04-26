@@ -6,7 +6,6 @@ export { AuthContext };
 
 export const useAuth = () => useContext(AuthContext);
 
-// Safe localStorage access
 const getStorage = (key) => {
   try {
     if (typeof window === 'undefined') return null;
@@ -42,15 +41,20 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const initAuth = async () => {
       const storedToken = getStorage('token');
-      if (storedToken) {
-        try {
-          const response = await auth.getMe();
-          setUser(response.data.user);
-          setStorage('user', JSON.stringify(response.data.user));
-        } catch (error) {
-          console.log('Auth init error (ignored)');
-          removeStorage('token');
-          setToken(null);
+      const storedUser = getStorage('user');
+      
+      if (storedToken && storedUser) {
+        if (storedToken.startsWith('google_token_') || storedToken.startsWith('demo_')) {
+          setUser(JSON.parse(storedUser));
+        } else {
+          try {
+            const response = await auth.getMe();
+            setUser(response.data.user);
+          } catch {
+            removeStorage('token');
+            removeStorage('user');
+            setToken(null);
+          }
         }
       }
       setLoading(false);
@@ -78,6 +82,15 @@ export const AuthProvider = ({ children }) => {
     return userData;
   };
 
+  const loginWithGoogle = (userData) => {
+    const newToken = 'google_token_' + Date.now();
+    setStorage('token', newToken);
+    setStorage('user', JSON.stringify(userData));
+    setToken(newToken);
+    setUser(userData);
+    return userData;
+  };
+
   const logout = () => {
     removeStorage('token');
     removeStorage('user');
@@ -91,7 +104,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, register, logout, updateUser, loading }}>
+    <AuthContext.Provider value={{ user, token, login, register, loginWithGoogle, logout, updateUser, loading }}>
       {children}
     </AuthContext.Provider>
   );

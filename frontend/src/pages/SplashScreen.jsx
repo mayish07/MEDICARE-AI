@@ -5,6 +5,7 @@ import { Stethoscope, Heart, Activity, Phone, ArrowRight } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { hospitals } from '../data/hospitals';
 import { signInWithGoogle } from '../firebase/config';
+import { useAuth } from '../context/AuthContext';
 
 const SplashScreen = ({ onGetStarted }) => {
   const [showLogin, setShowLogin] = useState(false);
@@ -100,20 +101,20 @@ const SplashScreen = ({ onGetStarted }) => {
 
 const LoginOptions = ({ onBack }) => {
   const { isDark, toggleDark } = useDarkMode();
+  const { loginWithGoogle } = useAuth();
   const navigate = useNavigate();
   
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithGoogle();
       const user = result.user;
-      const mockUser = {
+      const userData = {
         _id: 'google_' + user.uid,
         name: user.displayName,
         email: user.email,
         city: localStorage.getItem('selectedCity') || 'Mangalore'
       };
-      localStorage.setItem('token', 'google_token_' + user.uid);
-      localStorage.setItem('user', JSON.stringify(mockUser));
+      loginWithGoogle(userData);
       navigate('/dashboard');
     } catch (error) {
       console.error('Google login error:', error);
