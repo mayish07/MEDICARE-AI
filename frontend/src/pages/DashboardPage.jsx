@@ -4,9 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar, FileText, Activity, MessageCircle, Phone, MapPin, 
   Clock, Stethoscope, ArrowRight, Plus, User, Heart, Thermometer,
-  Droplets, Lungs, Brain, Pill, Hospital, ChevronRight, Bell,
-  Wind, Moon, Sun, Coffee, Target, TrendingUp, Award, AlertCircle,
-  Video, Mic, Scan, FlaskConical, X, CheckCircle
+  Droplets, ChevronRight, Bell, Wind, Moon, Sun, Target, TrendingUp, 
+  Award, Video, Scan, X, CheckCircle, Pill
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
