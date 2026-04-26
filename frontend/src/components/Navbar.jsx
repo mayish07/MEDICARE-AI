@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, User, LogIn, UserPlus, Sun, Moon, Phone, MapPin } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { useAuth } from '../hooks/useAuth';
-import { CITY } from '../utils/helpers';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = () => {
   const { isDark, toggleDark } = useDarkMode();
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [city, setCity] = useState(() => localStorage.getItem('selectedCity') || CITY.MANGALORE);
+  const [city, setCity] = useState(() => localStorage.getItem('selectedCity') || 'Mangalore');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -33,7 +32,8 @@ const Navbar = () => {
     { name: 'Hospitals', href: '/hospitals' },
     { name: 'Doctors', href: '/doctors' },
     { name: 'Symptom Checker', href: '/symptom-checker' },
-    { name: 'Emergency', href: '/emergency' }
+    { name: 'Emergency', href: '/emergency' },
+    { name: 'Coming Soon', href: '/coming-soon' }
   ];
 
   return (
@@ -61,8 +61,10 @@ const Navbar = () => {
               onChange={(e) => setCity(e.target.value)}
               className="bg-gray-100 dark:bg-dark-bg border-0 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary"
             >
-              <option value={CITY.MANGALORE}>Mangalore</option>
-              <option value={CITY.BANGALORE}>Bangalore</option>
+              <option value="Mangalore">Mangalore</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Chennai">Chennai</option>
             </select>
 
             <button onClick={toggleDark} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
@@ -116,8 +118,10 @@ const Navbar = () => {
                   onChange={(e) => setCity(e.target.value)}
                   className="bg-gray-100 dark:bg-gray-800 border-0 rounded-lg px-3 py-2"
                 >
-                  <option value={CITY.MANGALORE}>Mangalore</option>
-                  <option value={CITY.BANGALORE}>Bangalore</option>
+                  <option value="Mangalore">Mangalore</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Chennai">Chennai</option>
                 </select>
 
                 {user ? (

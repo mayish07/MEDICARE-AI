@@ -19,6 +19,7 @@ import HealthRecordsPage from './pages/HealthRecordsPage';
 import AppointmentsPage from './pages/AppointmentsPage';
 import ProfilePage from './pages/ProfilePage';
 import EmergencyPage from './pages/EmergencyPage';
+import ComingSoonPage from './pages/ComingSoonPage';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/symptom-checker" element={<SymptomCheckerPage />} />
         <Route path="/ai-chat" element={<AIChatPage />} />
         <Route path="/emergency" element={<EmergencyPage />} />
+        <Route path="/coming-soon" element={<ComingSoonPage />} />
         <Route path="/book-appointment" element={
           <ProtectedRoute>
             <BookAppointmentPage />
