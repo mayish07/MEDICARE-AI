@@ -1,35 +1,35 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar, FileText, Activity, MessageCircle, Phone, MapPin, 
   Clock, Stethoscope, ArrowRight, Plus, User, Heart,
   Droplets, ChevronRight, Bell, Wind, Moon, Sun, Target, TrendingUp, 
-  Award, Video, Scan, X, CheckCircle, Pill
+  Award, Video, Scan, X, CheckCircle, Pill, AlertTriangle, Info
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../hooks/useAuth';
 
-const AppleIcon = ({ className }) => (
+const IconApple = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2C8.5 2 5.5 4.5 5 8c.5.5 1 1.5 1 2.5 0 1-.5 2-1 2.5-.5 2 0 4 1.5 5.5 1.5 1.5 3.5 2.5 5.5 2.5s4-1 5.5-2.5c1.5-1.5 2-3.5 1.5-5.5-.5-.5-1-1.5-1-2.5 0-1 .5-2 1-2.5C18.5 4.5 15.5 2 12 2zm-2 5c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1zm4 0c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1z"/>
   </svg>
 );
 
-const CloudIcon = ({ className }) => (
+const IconCloud = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
   </svg>
 );
 
-const StarIcon = ({ className }) => (
+const IconStar = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
   </svg>
 );
 
-const LayoutIcon = ({ className }) => (
+const IconLayout = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <rect x="3" y="3" width="7" height="9" rx="1"/>
     <rect x="14" y="3" width="7" height="5" rx="1"/>
@@ -41,7 +41,7 @@ const LayoutIcon = ({ className }) => (
 const DashboardPage = () => {
   const { user } = useAuth();
   const [weather] = useState({ temp: 28, condition: 'Sunny', humidity: 65 });
-  const [bmi, setBmi] = useState({ weight: 70, height: 170, result: 24.2, status: 'Normal' });
+  const [bmiState, setBmiState] = useState({ weight: 70, height: 170, result: 24.2, status: 'Normal' });
   const [medReminders, setMedReminders] = useState([
     { id: 1, name: 'Vitamin D', time: '8:00 AM', taken: false },
     { id: 2, name: 'Iron Tablet', time: '12:00 PM', taken: true },
@@ -49,34 +49,62 @@ const DashboardPage = () => {
   ]);
   const [showBmiModal, setShowBmiModal] = useState(false);
   const [showEmergencyModal, setShowEmergencyModal] = useState(false);
-  const [healthTips] = useState([
+  const [notifications, setNotifications] = useState([
+    { id: 1, title: 'Appointment Reminder', desc: 'Dr. Sharma tomorrow at 10 AM', time: '1 hr ago', read: false },
+    { id: 2, title: 'Health Tip', desc: 'Stay hydrated today!', time: '2 hrs ago', read: true },
+    { id: 3, title: 'Results Ready', desc: 'Blood test results available', time: '1 day ago', read: false }
+  ]);
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const healthTips = useMemo(() => [
     { icon: Droplets, title: 'Stay Hydrated', tip: 'Drink at least 8 glasses of water daily', color: 'text-blue-500' },
     { icon: Moon, title: 'Sleep Well', tip: 'Aim for 7-8 hours of sleep', color: 'text-purple-500' },
     { icon: Activity, title: 'Exercise', tip: '30 min of moderate activity', color: 'text-green-500' },
-    { icon: AppleIcon, title: 'Eat Healthy', tip: 'Include fruits & vegetables', color: 'text-orange-500' }
-  ]);
-  const [quickActions] = useState([
+    { icon: IconApple, title: 'Eat Healthy', tip: 'Include fruits & vegetables', color: 'text-orange-500' }
+  ], []);
+
+  const quickActions = useMemo(() => [
     { icon: Scan, label: 'Scan Reports', color: 'from-blue-500 to-cyan-500', href: '/health-records' },
     { icon: MessageCircle, label: 'AI Chat', color: 'from-purple-500 to-pink-500', href: '/ai-chat' },
     { icon: MapPin, label: 'Find Docs', color: 'from-green-500 to-emerald-500', href: '/doctors' },
     { icon: Phone, label: 'Emergency', color: 'from-red-500 to-orange-500', href: '/emergency', urgent: true }
-  ]);
-  const [recentActivity] = useState([
+  ], []);
+
+  const recentActivity = useMemo(() => [
     { title: 'Appointment Booked', desc: 'Dr. Sarah - General Checkup', time: '2 hrs ago', icon: Calendar },
     { title: 'Health Report Uploaded', desc: 'Blood Test Results', time: '1 day ago', icon: FileText },
     { title: 'Medication Taken', desc: 'Vitamin D - Morning dose', time: '1 day ago', icon: Pill }
-  ]);
-  const [doctorsNearYou] = useState([
+  ], []);
+
+  const doctorsNearYou = useMemo(() => [
     { name: 'Dr. Priya Sharma', specialty: 'Cardiologist', distance: '0.5 km', rating: 4.9, hospital: 'City Heart Center' },
     { name: 'Dr. Rahul Verma', specialty: 'General Physician', distance: '1.2 km', rating: 4.8, hospital: 'Metro Hospital' },
     { name: 'Dr. Anjali Singh', specialty: 'Pediatrician', distance: '2.0 km', rating: 4.7, hospital: 'Children Care Clinic' }
-  ]);
-  const [healthNews] = useState([
+  ], []);
+
+  const healthNews = useMemo(() => [
     { title: 'New Heart Health Guidelines', category: 'Heart', time: '2 hrs ago' },
     { title: 'Benefits of Morning Walk', category: 'Fitness', time: '5 hrs ago' },
     { title: 'Mental Health Awareness Week', category: 'Wellness', time: '1 day ago' }
-  ]);
-  
+  ], []);
+
+  const menuItems = useMemo(() => [
+    { name: 'Dashboard', icon: IconLayout, active: true },
+    { name: 'Find Doctors', icon: Stethoscope, href: '/doctors' },
+    { name: 'Appointments', icon: Calendar, href: '/appointments' },
+    { name: 'Symptoms', icon: Activity, href: '/symptom-checker' },
+    { name: 'AI Chat', icon: MessageCircle, href: '/ai-chat' },
+    { name: 'Health Records', icon: FileText, href: '/health-records' },
+    { name: 'Emergency', icon: Phone, href: '/emergency', urgent: true }
+  ], []);
+
+  const stats = useMemo(() => [
+    { label: 'Appointments', value: 3, icon: Calendar, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20' },
+    { label: 'Health Score', value: '85%', icon: Heart, color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20' },
+    { label: 'Days Active', value: 30, icon: Activity, color: 'text-green-500', bg: 'bg-green-50 dark:bg-green-900/20' },
+    { label: 'Streak', value: 7, icon: Award, color: 'text-yellow-500', bg: 'bg-yellow-50 dark:bg-yellow-900/20' }
+  ], []);
+
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return 'Good Morning';
@@ -86,7 +114,7 @@ const DashboardPage = () => {
 
   const getHealthCondition = () => {
     if (weather.condition === 'Sunny') return { text: 'Good for outdoor activities', icon: Sun };
-    if (weather.condition === 'Cloudy') return { text: 'Stay cautious outdoors', icon: CloudIcon };
+    if (weather.condition === 'Cloudy') return { text: 'Stay cautious outdoors', icon: IconCloud };
     return { text: 'Stay indoor if sensitive', icon: Wind };
   };
 
@@ -95,21 +123,26 @@ const DashboardPage = () => {
   };
 
   const calculateBmi = () => {
-    const heightM = bmi.height / 100;
-    const bmiValue = (bmi.weight / (heightM * heightM)).toFixed(1);
+    if (bmiState.height <= 0 || bmiState.weight <= 0) return;
+    const heightM = bmiState.height / 100;
+    const bmiValue = (bmiState.weight / (heightM * heightM)).toFixed(1);
     let status = 'Normal';
     if (bmiValue < 18.5) status = 'Underweight';
     else if (bmiValue >= 25 && bmiValue < 30) status = 'Overweight';
     else if (bmiValue >= 30) status = 'Obese';
-    setBmi({ ...bmi, result: bmiValue, status });
+    setBmiState({ ...bmiState, result: bmiValue, status });
   };
 
-  const stats = [
-    { label: 'Appointments', value: 3, icon: Calendar, color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20' },
-    { label: 'Health Score', value: '85%', icon: Heart, color: 'text-red-500', bg: 'bg-red-50 dark:bg-red-900/20' },
-    { label: 'Days Active', value: 30, icon: Activity, color: 'text-green-500', bg: 'bg-green-50 dark:bg-green-900/20' },
-    { label: 'Streak', value: 7, icon: Award, color: 'text-yellow-500', bg: 'bg-yellow-50 dark:bg-yellow-900/20' }
-  ];
+  const markNotificationRead = (id) => {
+    setNotifications(notifications.map(n => n.id === id ? { ...n, read: true } : n));
+  };
+
+  const unreadCount = notifications.filter(n => !n.read).length;
+  const userName = user?.name || 'User';
+  const userCity = user?.city || 'City';
+  const firstName = user?.name?.split(' ')[0] || 'User';
+  const bmiProgress = Math.min(100, (bmiState.result / 35) * 100);
+  const takenCount = medReminders.filter(m => m.taken).length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -124,13 +157,13 @@ const DashboardPage = () => {
             <div className="glass-card rounded-card p-5 sticky top-24">
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
                 <img 
-                  src={`https://ui-avatars.com/api/?name=${user?.name || 'User'}&background=00B4D8&color=fff&size=96`} 
-                  alt="User" 
+                  src={`https://ui-avatars.com/api/?name=${encodeURIComponent(userName)}&background=00B4D8&color=fff&size=96`} 
+                  alt={userName}
                   className="w-16 h-16 rounded-2xl shadow-lg" 
                 />
                 <div>
-                  <p className="font-heading font-bold text-lg">{user?.name || 'User'}</p>
-                  <p className="text-sm text-gray-500">{user?.city || 'City'}</p>
+                  <p className="font-heading font-bold text-lg">{userName}</p>
+                  <p className="text-sm text-gray-500">{userCity}</p>
                   <div className="flex items-center gap-1 mt-1">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span className="text-xs text-green-500">Online</span>
@@ -141,15 +174,7 @@ const DashboardPage = () => {
               <div className="mb-6">
                 <h3 className="font-medium text-sm text-gray-500 mb-3 uppercase tracking-wider">Menu</h3>
                 <nav className="space-y-1">
-                  {[
-                    { name: 'Dashboard', icon: LayoutIcon, active: true },
-                    { name: 'Find Doctors', icon: Stethoscope, href: '/doctors' },
-                    { name: 'Appointments', icon: Calendar, href: '/appointments' },
-                    { name: 'Symptoms', icon: Activity, href: '/symptom-checker' },
-                    { name: 'AI Chat', icon: MessageCircle, href: '/ai-chat' },
-                    { name: 'Health Records', icon: FileText, href: '/health-records' },
-                    { name: 'Emergency', icon: Phone, href: '/emergency', urgent: true }
-                  ].map(item => (
+                  {menuItems.map(item => (
                     <Link 
                       key={item.name}
                       to={item.href || '#'}
@@ -194,16 +219,56 @@ const DashboardPage = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
                 <div>
                   <h1 className="text-3xl font-heading font-bold mb-1">
-                    {getGreeting()}, {user?.name?.split(' ')[0] || 'User'} 👋
+                    {getGreeting()}, {firstName} 👋
                   </h1>
                   <p className="text-gray-500">
                     {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="glass-card rounded-card px-4 py-2 flex items-center gap-2">
-                    <Bell className="w-5 h-5 text-primary" />
-                    <span className="font-medium">3 alerts</span>
+                  <div className="relative">
+                    <motion.button 
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => setShowNotifications(!showNotifications)}
+                      className="glass-card rounded-card px-4 py-2 flex items-center gap-2"
+                    >
+                      <Bell className="w-5 h-5 text-primary" />
+                      <span className="font-medium">Alerts</span>
+                      {unreadCount > 0 && (
+                        <span className="w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+                          {unreadCount}
+                        </span>
+                      )}
+                    </motion.button>
+                    <AnimatePresence>
+                      {showNotifications && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          className="absolute top-full right-0 mt-2 w-80 glass-card rounded-card p-4 z-50"
+                        >
+                          <h3 className="font-bold mb-3">Notifications</h3>
+                          {notifications.map(n => (
+                            <div 
+                              key={n.id}
+                              onClick={() => markNotificationRead(n.id)}
+                              className={`p-3 rounded-lg mb-2 cursor-pointer ${
+                                n.read ? 'bg-gray-50 dark:bg-gray-800' : 'bg-primary/10'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between">
+                                <p className="font-medium text-sm">{n.title}</p>
+                                {!n.read && <span className="w-2 h-2 bg-primary rounded-full"></span>}
+                              </div>
+                              <p className="text-xs text-gray-500">{n.desc}</p>
+                              <p className="text-xs text-gray-400">{n.time}</p>
+                            </div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
@@ -277,8 +342,8 @@ const DashboardPage = () => {
                 <div className="text-center py-4">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     {(() => {
-                      const Icon = getHealthCondition().icon;
-                      return <Icon className="w-12 h-12 text-yellow-500" />;
+                      const WeatherIcon = getHealthCondition().icon;
+                      return <WeatherIcon className="w-12 h-12 text-yellow-500" />;
                     })()}
                     <span className="text-4xl font-heading font-bold">{weather.temp}°</span>
                   </div>
@@ -321,8 +386,8 @@ const DashboardPage = () => {
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl text-white">
                     <p className="text-sm opacity-90">Your BMI</p>
-                    <p className="text-3xl font-bold mt-1">{bmi.result}</p>
-                    <p className="text-sm mt-2">{bmi.status}</p>
+                    <p className="text-3xl font-bold mt-1">{bmiState.result}</p>
+                    <p className="text-sm mt-2">{bmiState.status}</p>
                   </div>
                   <div className="col-span-2 flex flex-col justify-center">
                     <div className="flex items-center justify-between text-sm mb-2">
@@ -333,7 +398,7 @@ const DashboardPage = () => {
                     <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
-                        animate={{ width: `${Math.min(100, (bmi.result / 35) * 100)}%` }}
+                        animate={{ width: `${bmiProgress}%` }}
                         className="h-full bg-gradient-to-r from-green-500 to-yellow-500 rounded-full"
                       />
                     </div>
@@ -352,7 +417,7 @@ const DashboardPage = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-heading font-bold text-lg">Medications</h2>
-                  <span className="text-sm text-gray-500">{medReminders.filter(m => m.taken).length}/{medReminders.length}</span>
+                  <span className="text-sm text-gray-500">{takenCount}/{medReminders.length}</span>
                 </div>
                 <div className="space-y-3">
                   {medReminders.slice(0, 3).map(med => (
@@ -463,7 +528,7 @@ const DashboardPage = () => {
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <img 
-                        src={`https://ui-avatars.com/api/?name=${doc.name}&background=random&size=80`} 
+                        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(doc.name)}&background=random&size=80`} 
                         alt={doc.name}
                         className="w-12 h-12 rounded-xl"
                       />
@@ -478,7 +543,7 @@ const DashboardPage = () => {
                         {doc.distance}
                       </span>
                       <span className="flex items-center gap-1">
-                        <StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
+                        <IconStar className="w-4 h-4 text-yellow-500 fill-current" />
                         {doc.rating}
                       </span>
                     </div>
@@ -575,8 +640,8 @@ const DashboardPage = () => {
                   <label className="block text-sm font-medium mb-2">Weight (kg)</label>
                   <input 
                     type="number"
-                    value={bmi.weight}
-                    onChange={e => setBmi({ ...bmi, weight: Number(e.target.value) })}
+                    value={bmiState.weight}
+                    onChange={e => setBmiState({ ...bmiState, weight: Number(e.target.value) || 0 })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-transparent"
                   />
                 </div>
@@ -584,8 +649,8 @@ const DashboardPage = () => {
                   <label className="block text-sm font-medium mb-2">Height (cm)</label>
                   <input 
                     type="number"
-                    value={bmi.height}
-                    onChange={e => setBmi({ ...bmi, height: Number(e.target.value) })}
+                    value={bmiState.height}
+                    onChange={e => setBmiState({ ...bmiState, height: Number(e.target.value) || 0 })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-transparent"
                   />
                 </div>
@@ -597,11 +662,11 @@ const DashboardPage = () => {
                 >
                   Calculate BMI
                 </motion.button>
-                {bmi.result && (
+                {bmiState.result && (
                   <div className="text-center p-4 bg-primary/10 rounded-xl">
                     <p className="text-sm text-gray-500">Your BMI</p>
-                    <p className="text-3xl font-bold text-primary">{bmi.result}</p>
-                    <p className="text-lg">{bmi.status}</p>
+                    <p className="text-3xl font-bold text-primary">{bmiState.result}</p>
+                    <p className="text-lg">{bmiState.status}</p>
                   </div>
                 )}
               </div>
