@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import SplashScreen from './pages/SplashScreen';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -21,6 +22,10 @@ import EmergencyPage from './pages/EmergencyPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(() => {
+    return localStorage.getItem('seenSplash') !== 'true';
+  });
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -29,10 +34,18 @@ function App() {
     });
   }, []);
 
+  const handleSplashComplete = () => {
+    localStorage.setItem('seenSplash', 'true');
+    setShowSplash(false);
+  };
+
   return (
     <div className="min-h-screen">
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={
+          showSplash ? <SplashScreen onGetStarted={handleSplashComplete} /> : <LandingPage />
+        } />
+        <Route path="/splash" element={<SplashScreen onGetStarted={handleSplashComplete} />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/hospitals" element={<HospitalsPage />} />

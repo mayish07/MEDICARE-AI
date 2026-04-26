@@ -11,7 +11,8 @@ import { hospitals as apiHospitals } from '../utils/api';
 
 const HospitalsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const cityParam = searchParams.get('city') || 'Mangalore';
+  const storedCity = localStorage.getItem('selectedCity') || 'Mangalore';
+  const cityParam = searchParams.get('city') || storedCity;
   const [city, setCity] = useState(cityParam);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
