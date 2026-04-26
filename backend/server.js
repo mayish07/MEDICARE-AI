@@ -18,9 +18,16 @@ const paymentRoutes = require('./routes/paymentRoutes');
 
 const app = express();
 
-connectDB();
+// Connect to MongoDB first, then start server
+const startServer = async () => {
+  try {
+    await connectDB();
+    console.log('Database connected successfully');
+  } catch (error) {
+    console.error('Database connection failed:', error.message);
+  }
 
-app.use(helmet());
+  app.use(helmet());
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5173'
 }));
@@ -52,16 +59,9 @@ app.use(errorMiddleware.errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, () => {
+// Start server
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
-
-process.on('SIGTERM', () => {
-  console.log('SIGTERM signal received: closing HTTP server');
-  server.close(() => {
-    console.log('HTTP server closed');
-    process.exit(0);
-  });
 });
 
 module.exports = app;
