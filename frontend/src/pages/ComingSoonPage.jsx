@@ -4,7 +4,7 @@ import { Bell, Clock, Truck, Heart, Pill, Calendar, AlertTriangle } from 'lucide
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 
-const ComingSoonCard = ({ icon: Icon, title, description, progress }) => (
+const ComingSoonCard = ({ icon: Icon, title, description, progress, link }) => (
   <motion.div 
     whileHover={{ scale: 1.02 }}
     className="glass-card rounded-2xl p-6 text-center"
@@ -14,13 +14,21 @@ const ComingSoonCard = ({ icon: Icon, title, description, progress }) => (
     </div>
     <h3 className="font-heading font-bold text-lg mb-2">{title}</h3>
     <p className="text-sm text-gray-500 mb-4">{description}</p>
-    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
-      <div className="bg-gradient-to-r from-primary to-accent h-2 rounded-full" style={{ width: `${progress}%` }} />
-    </div>
-    <p className="text-xs text-gray-400">{progress}% Complete</p>
-    <span className="inline-block mt-3 px-3 py-1 bg-warning/20 text-warning text-xs rounded-full">
-      Coming Soon
-    </span>
+    {link ? (
+      <Link to={link} className="inline-block px-4 py-2 gradient-btn rounded-lg text-white font-medium">
+        Try Now →
+      </Link>
+    ) : (
+      <>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
+          <div className="bg-gradient-to-r from-primary to-accent h-2 rounded-full" style={{ width: `${progress}%` }} />
+        </div>
+        <p className="text-xs text-gray-400">{progress}% Complete</p>
+        <span className="inline-block mt-3 px-3 py-1 bg-warning/20 text-warning text-xs rounded-full">
+          Coming Soon
+        </span>
+      </>
+    )}
   </motion.div>
 );
 
@@ -70,9 +78,9 @@ const FeaturesPage = () => {
     },
     {
       icon: Heart,
-      title: 'Family Profiles',
+      title: '✅ Family Profiles',
       description: 'Manage health for entire family in one account.',
-      progress: 20
+      link: '/family'
     }
   ];
 

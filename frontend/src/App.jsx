@@ -20,6 +20,7 @@ import AppointmentsPage from './pages/AppointmentsPage';
 import ProfilePage from './pages/ProfilePage';
 import EmergencyPage from './pages/EmergencyPage';
 import ComingSoonPage from './pages/ComingSoonPage';
+import FamilyPage from './pages/FamilyPage';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -58,6 +59,11 @@ function App() {
         <Route path="/ai-chat" element={<AIChatPage />} />
         <Route path="/emergency" element={<EmergencyPage />} />
         <Route path="/coming-soon" element={<ComingSoonPage />} />
+        <Route path="/family" element={
+          <ProtectedRoute>
+            <FamilyPage />
+          </ProtectedRoute>
+        } />
         <Route path="/book-appointment" element={
           <ProtectedRoute>
             <BookAppointmentPage />
