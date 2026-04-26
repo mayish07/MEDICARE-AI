@@ -118,6 +118,7 @@ const DashboardPage = () => {
     { name: 'Symptoms', icon: Activity, href: '/symptom-checker' },
     { name: 'AI Chat', icon: MessageCircle, href: '/ai-chat' },
     { name: 'Health Records', icon: FileText, href: '/health-records' },
+    { name: 'Family', icon: User, href: '/family' },
     { name: 'Emergency', icon: Phone, href: '/emergency', urgent: true }
   ], []);
 

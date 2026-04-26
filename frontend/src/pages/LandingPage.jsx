@@ -152,9 +152,11 @@ const LandingPage = () => {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-heading font-bold text-center mb-12">Top Hospitals in Your City</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <CityCard city="Mangalore" count={{ hospitals: 5, doctors: 25 }} />
-          <CityCard city="Bangalore" count={{ hospitals: 5, doctors: 40 }} />
+        <div className="grid md:grid-cols-4 gap-6">
+          <CityCard city="Mangalore" count={{ hospitals: 5, doctors: 15 }} />
+          <CityCard city="Bangalore" count={{ hospitals: 5, doctors: 15 }} />
+          <CityCard city="Hyderabad" count={{ hospitals: 5, doctors: 10 }} />
+          <CityCard city="Chennai" count={{ hospitals: 5, doctors: 10 }} />
         </div>
       </section>
 
@@ -163,11 +165,11 @@ const LandingPage = () => {
           <h2 className="text-3xl font-heading font-bold text-center mb-12">Our Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard icon={Activity} title="AI Symptom Checker" desc="Describe your symptoms and get instant AI analysis" index={0} />
-            <FeatureCard icon={Calendar} title="Book Appointments" desc="Real hospitals in Mangalore & Bangalore" index={1} />
-            <FeatureCard icon={MessageCircle} title="Online Consultation" desc="Video call with doctors from home" index={2} />
+            <FeatureCard icon={Calendar} title="Book Appointments" desc="Book appointments at top hospitals" index={1} />
+            <FeatureCard icon={MessageCircle} title="AI Health Chat" desc="24/7 AI assistant for health queries" index={2} />
             <FeatureCard icon={FileText} title="Health Records" desc="Store prescriptions, reports securely" index={3} />
             <FeatureCard icon={Phone} title="Emergency SOS" desc="One tap emergency with hospital contact" index={4} />
-            <FeatureCard icon={Stethoscope} title="AI Health Chat" desc="24/7 AI assistant for health queries" index={5} />
+            <FeatureCard icon={Stethoscope} title="Family Profiles" desc="Manage health for your entire family" index={5} />
           </div>
         </div>
       </section>

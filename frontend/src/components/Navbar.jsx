@@ -33,7 +33,7 @@ const Navbar = () => {
     { name: 'Doctors', href: '/doctors' },
     { name: 'Symptom Checker', href: '/symptom-checker' },
     { name: 'Emergency', href: '/emergency' },
-    { name: 'Coming Soon', href: '/coming-soon' }
+    { name: 'Family', href: '/family' }
   ];
 
   return (
