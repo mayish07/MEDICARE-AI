@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import SplashScreen from './pages/SplashScreen';
+import GoogleCallback from './pages/GoogleCallback';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -46,6 +47,7 @@ function App() {
           showSplash ? <SplashScreen onGetStarted={handleSplashComplete} /> : <LandingPage />
         } />
         <Route path="/splash" element={<SplashScreen onGetStarted={handleSplashComplete} />} />
+        <Route path="/google-callback" element={<GoogleCallback />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/hospitals" element={<HospitalsPage />} />
