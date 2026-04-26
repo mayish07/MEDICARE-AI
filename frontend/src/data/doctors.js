@@ -12,6 +12,7 @@ const generateSlots = (days = 7) => {
 };
 
 export const doctors = [
+  // MANGALORE DOCTORS (15)
   {
     _id: '1',
     name: 'Dr. Priya Sharma',
@@ -28,8 +29,7 @@ export const doctors = [
     totalReviews: 156,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/cardiologists'
+    onlineConsultation: true
   },
   {
     _id: '2',
@@ -47,8 +47,7 @@ export const doctors = [
     totalReviews: 203,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/neurologists'
+    onlineConsultation: true
   },
   {
     _id: '3',
@@ -66,8 +65,7 @@ export const doctors = [
     totalReviews: 178,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/gynecologists'
+    onlineConsultation: true
   },
   {
     _id: '4',
@@ -85,8 +83,7 @@ export const doctors = [
     totalReviews: 145,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: false,
-    bookingLink: 'https://www.practo.com/doctors/orthopedists'
+    onlineConsultation: false
   },
   {
     _id: '5',
@@ -104,8 +101,7 @@ export const doctors = [
     totalReviews: 98,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/pediatricians'
+    onlineConsultation: true
   },
   {
     _id: '6',
@@ -123,11 +119,173 @@ export const doctors = [
     totalReviews: 67,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/general-physicians'
+    onlineConsultation: true
   },
   {
     _id: '7',
+    name: 'Dr. Deepak Malhotra',
+    specialization: 'Dermatologist',
+    qualification: 'MD Dermatology',
+    experience: 12,
+    hospital: { name: 'KMC Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Deepak+Malhotra&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Deepak Malhotra specializes in skin conditions and cosmetic dermatology.',
+    languages: ['Hindi', 'English', 'Kannada'],
+    consultationFee: 700,
+    rating: 4.7,
+    totalReviews: 112,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '8',
+    name: 'Dr. Smitha Kamath',
+    specialization: 'Ophthalmologist',
+    qualification: 'MS Ophthalmology',
+    experience: 9,
+    hospital: { name: 'A.J. Hospital & Research Centre', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Smitha+Kamath&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Smitha Kamath is an ophthalmologist specializing in eye surgeries and LASIK.',
+    languages: ['Kannada', 'English'],
+    consultationFee: 600,
+    rating: 4.6,
+    totalReviews: 89,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '9',
+    name: 'Dr. Raghavendra',
+    specialization: 'ENT Specialist',
+    qualification: 'MS ENT',
+    experience: 14,
+    hospital: { name: 'Father Muller Medical College Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Raghavendra&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Raghavendra is an ENT specialist with expertise in cochlear implants.',
+    languages: ['Kannada', 'English', 'Tulu'],
+    consultationFee: 550,
+    rating: 4.8,
+    totalReviews: 145,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '10',
+    name: 'Dr. Lakshmi Prabhu',
+    specialization: 'Psychiatrist',
+    qualification: 'MD Psychiatry',
+    experience: 11,
+    hospital: { name: 'Yenepoya Medical College Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Lakshmi+Prabhu&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Lakshmi Prabhu is a psychiatrist specializing in mental health and depression treatment.',
+    languages: ['Kannada', 'English', 'Hindi'],
+    consultationFee: 650,
+    rating: 4.7,
+    totalReviews: 167,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '11',
+    name: 'Dr. Binoy George',
+    specialization: 'Gastroenterologist',
+    qualification: 'MD, DM Gastroenterology',
+    experience: 10,
+    hospital: { name: 'KMC Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Binoy+George&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Binoy George specializes in digestive disorders and liver diseases.',
+    languages: ['English', 'Hindi', 'Kannada'],
+    consultationFee: 850,
+    rating: 4.6,
+    totalReviews: 98,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '12',
+    name: 'Dr. Rashmi K',
+    specialization: 'Endocrinologist',
+    qualification: 'MD, DM Endocrinology',
+    experience: 8,
+    hospital: { name: 'Yenepoya Medical College Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Rashmi+K&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Rashmi K specializes in diabetes and thyroid disorders.',
+    languages: ['Kannada', 'English'],
+    consultationFee: 700,
+    rating: 4.5,
+    totalReviews: 76,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '13',
+    name: 'Dr. Arun Kumar',
+    specialization: 'Pulmonologist',
+    qualification: 'MD, DM Pulmonology',
+    experience: 13,
+    hospital: { name: 'A.J. Hospital & Research Centre', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Arun+Kumar&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Arun Kumar is a pulmonologist specializing in respiratory diseases.',
+    languages: ['Kannada', 'Hindi', 'English'],
+    consultationFee: 720,
+    rating: 4.7,
+    totalReviews: 112,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: false
+  },
+  {
+    _id: '14',
+    name: 'Dr. Divya Shenoy',
+    specialization: 'Nephrologist',
+    qualification: 'MD, DM Nephrology',
+    experience: 9,
+    hospital: { name: 'Father Muller Medical College Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Divya+Shenoy&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Divya Shenoy specializes in kidney diseases and dialysis management.',
+    languages: ['Kannada', 'English'],
+    consultationFee: 780,
+    rating: 4.6,
+    totalReviews: 87,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '15',
+    name: 'Dr. Kiran Kumar',
+    specialization: 'Urologist',
+    qualification: 'MS, MCh Urology',
+    experience: 16,
+    hospital: { name: 'KMC Hospital', city: 'Mangalore' },
+    city: 'Mangalore',
+    photo: 'https://ui-avatars.com/api/?name=Kiran+Kumar&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Kiran Kumar is a urologist specializing in kidney stone treatment.',
+    languages: ['Kannada', 'English', 'Hindi'],
+    consultationFee: 820,
+    rating: 4.8,
+    totalReviews: 134,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  // BANGALORE DOCTORS (15)
+  {
+    _id: '16',
     name: 'Dr. Kavita Reddy',
     specialization: 'Dermatologist',
     qualification: 'MD Dermatology',
@@ -142,11 +300,10 @@ export const doctors = [
     totalReviews: 234,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/dermatologists'
+    onlineConsultation: true
   },
   {
-    _id: '8',
+    _id: '17',
     name: 'Dr. Arun Thomas',
     specialization: 'Cardiologist',
     qualification: 'MD, DM Cardiology',
@@ -161,11 +318,10 @@ export const doctors = [
     totalReviews: 189,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/cardiologists'
+    onlineConsultation: true
   },
   {
-    _id: '9',
+    _id: '18',
     name: 'Dr. Radhika Raj',
     specialization: 'Neurologist',
     qualification: 'MD, DM Neurology',
@@ -180,11 +336,10 @@ export const doctors = [
     totalReviews: 156,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/neurologists'
+    onlineConsultation: true
   },
   {
-    _id: '10',
+    _id: '19',
     name: 'Dr. Prasad Hegde',
     specialization: 'Orthopedic',
     qualification: 'MS Orthopedics, Fellowship Joint Replacement',
@@ -199,11 +354,10 @@ export const doctors = [
     totalReviews: 178,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/orthopedists'
+    onlineConsultation: true
   },
   {
-    _id: '11',
+    _id: '20',
     name: 'Dr. Lakshmi Iyer',
     specialization: 'Gynecologist',
     qualification: 'MD, DGO, Fellowship Reproductive Medicine',
@@ -218,11 +372,10 @@ export const doctors = [
     totalReviews: 267,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/gynecologists'
+    onlineConsultation: true
   },
   {
-    _id: '12',
+    _id: '21',
     name: 'Dr. Naveen Joshi',
     specialization: 'Pulmonologist',
     qualification: 'MD, DM Pulmonology',
@@ -237,11 +390,10 @@ export const doctors = [
     totalReviews: 123,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/pulmonologists'
+    onlineConsultation: true
   },
   {
-    _id: '13',
+    _id: '22',
     name: 'Dr. Smitha Pai',
     specialization: 'Ophthalmologist',
     qualification: 'MS Ophthalmology, Fellowship Cornea',
@@ -256,11 +408,10 @@ export const doctors = [
     totalReviews: 145,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/ophthalmologists'
+    onlineConsultation: true
   },
   {
-    _id: '14',
+    _id: '23',
     name: 'Dr. Chandrashekar',
     specialization: 'Gastroenterologist',
     qualification: 'MD, DM Gastroenterology',
@@ -275,11 +426,10 @@ export const doctors = [
     totalReviews: 112,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: false,
-    bookingLink: 'https://www.practo.com/doctors/gastroenterologists'
+    onlineConsultation: false
   },
   {
-    _id: '15',
+    _id: '24',
     name: 'Dr. Divya Krishnan',
     specialization: 'Endocrinologist',
     qualification: 'MD, DM Endocrinology',
@@ -294,7 +444,114 @@ export const doctors = [
     totalReviews: 89,
     availableSlots: generateSlots(),
     isAvailable: true,
-    onlineConsultation: true,
-    bookingLink: 'https://www.practo.com/doctors/endocrinologists'
+    onlineConsultation: true
+  },
+  {
+    _id: '25',
+    name: 'Dr. Mahesh Reddy',
+    specialization: 'Oncologist',
+    qualification: 'MD, DM Oncology',
+    experience: 15,
+    hospital: { name: 'Manipal Hospital', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Mahesh+Reddy&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Mahesh Reddy is a renowned oncologist specializing in cancer treatment.',
+    languages: ['English', 'Hindi', 'Kannada'],
+    consultationFee: 1500,
+    rating: 4.9,
+    totalReviews: 234,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '26',
+    name: 'Dr. Anitha Bose',
+    specialization: 'Nephrologist',
+    qualification: 'MD, DM Nephrology',
+    experience: 10,
+    hospital: { name: 'Narayana Health City', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Anitha+Bose&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Anitha Bose specializes in kidney diseases and transplant care.',
+    languages: ['English', 'Hindi', 'Kannada'],
+    consultationFee: 950,
+    rating: 4.7,
+    totalReviews: 145,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '27',
+    name: 'Dr. Vijay Kumar',
+    specialization: 'Urologist',
+    qualification: 'MS, MCh Urology',
+    experience: 18,
+    hospital: { name: 'Fortis Hospital Bannerghatta', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Vijay+Kumar&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Vijay Kumar is a urologist with expertise in robotic surgeries.',
+    languages: ['English', 'Hindi', 'Kannada'],
+    consultationFee: 1100,
+    rating: 4.8,
+    totalReviews: 189,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '28',
+    name: 'Dr. Preethi Sharma',
+    specialization: 'Pediatrician',
+    qualification: 'MD Pediatrics',
+    experience: 12,
+    hospital: { name: 'Columbia Asia Hospital Hebbal', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Preethi+Sharma&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Preethi Sharma is a compassionate pediatrician with expertise in child development.',
+    languages: ['Kannada', 'English', 'Hindi'],
+    consultationFee: 650,
+    rating: 4.8,
+    totalReviews: 167,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '29',
+    name: 'Dr. Ramesh Patil',
+    specialization: 'Psychiatrist',
+    qualification: 'MD Psychiatry',
+    experience: 16,
+    hospital: { name: 'Sakra World Hospital', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Ramesh+Patil&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Ramesh Patil is a psychiatrist specializing in anxiety and depression.',
+    languages: ['Kannada', 'English', 'Hindi'],
+    consultationFee: 800,
+    rating: 4.7,
+    totalReviews: 198,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
+  },
+  {
+    _id: '30',
+    name: 'Dr. Sandeep Verma',
+    specialization: 'General Physician',
+    qualification: 'MD General Medicine',
+    experience: 14,
+    hospital: { name: 'Manipal Hospital', city: 'Bangalore' },
+    city: 'Bangalore',
+    photo: 'https://ui-avatars.com/api/?name=Sandeep+Verma&background=00B4D8&color=fff&size=150',
+    bio: 'Dr. Sandeep Verma is an experienced physician providing comprehensive primary care.',
+    languages: ['Hindi', 'English', 'Kannada', 'Tamil'],
+    consultationFee: 550,
+    rating: 4.6,
+    totalReviews: 234,
+    availableSlots: generateSlots(),
+    isAvailable: true,
+    onlineConsultation: true
   }
 ];
