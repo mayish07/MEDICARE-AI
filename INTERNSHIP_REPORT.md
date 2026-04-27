@@ -9,7 +9,7 @@
 Bengaluru, Karnataka, India
 
 Under the guidance of
-**AKSHATHA S**
+**Ms. Aysha Dilshad**
 Guide, Department of Computer Science
 Yenepoya Institute of Arts, Science, Commerce & Management
 
@@ -29,24 +29,20 @@ Deralakatte, Mangaluru – 575018, Karnataka, India
 
 # CERTIFICATE
 
-This project entitled "Web Application Development - Healthcare Platform" has been successfully carried out at "Perseverx Education Consultancy LLP" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (AI CC & DevOps with TCS), under the supervision and guidance of **AKSHATHA S**, Guide, Department of Computer Science, at Perseverx Education Consultancy LLP. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application (AI CC & DevOps with TCS) by Yenepoya (Deemed to be University) during academic year 2025-26.
+This is to certify that the project work entitled "Web Application Development - Healthcare Platform" has been successfully carried out at "Persevex Education Consultancy LLP" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (AI CC & DevOps with TCS), under the supervision and guidance of **Ms. Aysha Dilshad**, Internal Guide, Department of Computer Science, Yenepoya Institute of Arts, Science, Commerce and Management. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application by Yenepoya (Deemed to be university) during academic year 2025-26.
 
+Internal Guide:                Ms. Aysha Dilshad                Chairperson
 
-
-Internal Guide:                AKSHTAA S                       Chairperson
-
-Internal Examiner:                External Examiner
-
+Internal Examiner:            External Examiner
 
 PRINCIPAL
 Dr. Jeevan Raj
-The Yenepoya Institute of Arts, 
-Science, Commerce and Management 
+The Yenepoya Institute of Arts,
+Science, Commerce and Management
 (Deemed To be university)
 
-
-Submitted for the Viva-Voce              Place: Mangalore
-Examination held on:                    Date: ___________
+Submitted for the Viva-Voce          Place: Mangalore
+Examination held on:              Date: April 2026
 
 ---
 
@@ -58,7 +54,7 @@ This report documents the knowledge, skills, and practical experience acquired d
 
 I extend my sincere gratitude to AKSHTAA S, Project Mentor, for her valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
 
-Furthermore, I acknowledge the support and encouragement received from my institutional guide, **AKSHATHA S**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
+Furthermore, I acknowledge the support and encouragement received from my institutional guide, **Ms. Aysha Dilshad**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
 
 ---
 
@@ -94,11 +90,11 @@ I sincerely express my gratitude to Yenepoya Institute of Arts, Science, Commerc
 
 I extend my heartfelt thanks to Dr. Jeevan Raj, Principal, for his continuous support and guidance in facilitating this learning opportunity. I also express my sincere appreciation to Dr. Rathnakara Shetty P, Head of Department (Computer Science), for his encouragement and academic support throughout my internship journey.
 
-I am deeply grateful to **MEDICARE AI** and **AKSHATHA S**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to AKSHATHA S, for her invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
+I am deeply grateful to **MEDICARE AI** and **Ms. Aysha Dilshad**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to Ms. Aysha Dilshad, for her invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
 
 I also extend my sincere gratitude to the **MEDICARE AI Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of healthcare application development and AI integration.
 
-I am also thankful to my internal guide, **AKSHATHA S**, for her academic mentorship and for providing valuable insights that helped bridge the gap between theoretical learning and practical application.
+I am also thankful to my internal guide, **Ms. Aysha Dilshad**, for her academic mentorship and for providing valuable insights that helped bridge the gap between theoretical learning and practical application.
 
 Lastly, I am grateful to my faculty mentors, family, and peers for their encouragement and motivation throughout this journey.
 
