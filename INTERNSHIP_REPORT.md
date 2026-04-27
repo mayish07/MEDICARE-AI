@@ -33,7 +33,7 @@ This project entitled "Web Application Development - Healthcare Platform" has be
 
 
 
-Internal Guide:                    Chairperson
+Internal Guide:                AKSHTAA S                       Chairperson
 
 Internal Examiner:                External Examiner
 
@@ -58,7 +58,7 @@ This report documents the knowledge, skills, and practical experience acquired d
 
 I extend my sincere gratitude to AKSHTAA S, Project Mentor, for her valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
 
-Furthermore, I acknowledge the support and encouragement received from my institutional guide, **Guide Name**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
+Furthermore, I acknowledge the support and encouragement received from my institutional guide, **AKSHATHA S**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
 
 ---
 
@@ -76,7 +76,7 @@ Date: ___________
 
 Institution Guide Signature:
 
-Name: ___________
+Name: AKSHTAA S
 Institute: Yenepoya Institute of Arts, Science, Commerce, and Management
 Date: ___________
 
@@ -98,7 +98,7 @@ I am deeply grateful to **MEDICARE AI** and **AKSHATHA S**, for their visionary 
 
 I also extend my sincere gratitude to the **MEDICARE AI Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of healthcare application development and AI integration.
 
-I am also thankful to my internal guide, **Guide Name**, for his academic mentorship and for providing valuable insights that helped bridge the gap between theoretical learning and practical application.
+I am also thankful to my internal guide, **AKSHATHA S**, for her academic mentorship and for providing valuable insights that helped bridge the gap between theoretical learning and practical application.
 
 Lastly, I am grateful to my faculty mentors, family, and peers for their encouragement and motivation throughout this journey.
 
