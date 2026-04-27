@@ -419,76 +419,169 @@ During this internship, I worked on various features including user authenticati
 | Sl.No | Topic | Page No. |
 |-------|-------|----------|
 | 1 | CHAPTER 1: INTRODUCTION | 1 |
-| 1.1 | Background | 1 |
-| 1.2 | Objectives | 3 |
-| 1.3 | Purpose | 4 |
-| 1.4 | Scope | 5 |
-| 1.5 | Data Sources | 6 |
+| 1.1 | Background of the Study | 1 |
+| 1.2 | Need for the Study | 3 |
+| 1.3 | Objectives of the Project | 4 |
+| 1.4 | Purpose and Scope | 5 |
+| 1.5 | Data Sources and Collection | 6 |
 | 1.6 | Problem Definition | 7 |
 | 2 | CHAPTER 2: TOOLS AND TECHNOLOGY USED | 8 |
-| 2.1 | Introduction | 8 |
+| 2.1 | Introduction to Technologies | 8 |
 | 2.2 | Frontend Technologies | 9 |
-| 2.2.1 | React | 9 |
+| 2.2.1 | React.js Framework | 9 |
 | 2.2.2 | Tailwind CSS | 10 |
-| 2.2.3 | Framer Motion | 10 |
+| 2.2.3 | Framer Motion | 11 |
 | 2.2.4 | React Router DOM | 11 |
-| 2.2.5 | Axios | 11 |
-| 2.2.6 | Additional Libraries | 12 |
-| 2.3 | Backend Technologies | 12 |
-| 2.3.1 | Node.js | 12 |
-| 2.3.2 | Express | 13 |
-| 2.3.3 | Other Backend Libraries | 13 |
-| 2.4 | Database | 14 |
-| 2.5 | Deployment Technologies | 14 |
-| 2.6 | Development Tools | 15 |
-| 3 | CHAPTER 3: DATA COLLECTION AND ANALYSIS | 16 |
-| 3.1 | Data Collection | 16 |
-| 3.1.1 | Hospital Data | 16 |
-| 3.1.2 | Doctor Data | 17 |
-| 3.1.3 | User Data | 18 |
-| 3.2 | Data Preprocessing | 18 |
-| 3.3 | Feature Engineering | 19 |
-| 3.4 | Exploratory Data Analysis | 20 |
-| 3.4.1 | Distribution Analysis | 20 |
-| 3.4.2 | User Behavior | 21 |
-| 4 | CHAPTER 4: SYSTEM REQUIREMENTS AND ANALYSIS | 22 |
-| 4.1 | System Requirements Specification | 22 |
-| 4.1.1 | Functional Requirements | 23 |
-| 4.1.2 | Non-Functional Requirements | 26 |
-| 4.2 | Hardware and Software Requirements | 28 |
-| 4.2.1 | Hardware Requirements | 28 |
-| 4.2.2 | Software Requirements | 29 |
-| 4.3 | System Overview | 30 |
-| 4.3.1 | Architecture | 30 |
-| 4.3.2 | Technology Stack | 31 |
-| 4.3.3 | System Modules | 32 |
-| 5 | CHAPTER 5: IMPLEMENTATION | 33 |
-| 5.1 | System Design/Algorithms | 33 |
-| 5.1.1 | User Authentication Flow | 33 |
-| 5.1.2 | Appointment Booking Flow | 35 |
-| 5.1.3 | Database Schema | 36 |
-| 5.2 | Workflow/Process Diagrams | 38 |
-| 5.2.1 | Main Application Flow | 38 |
-| 5.2.2 | API Endpoints | 39 |
-| 5.3 | Module Description | 41 |
-| 5.3.1 | Authentication Module | 41 |
-| 5.3.2 | Hospital Module | 42 |
-| 5.3.3 | Doctor Module | 43 |
-| 5.3.4 | Appointment Module | 44 |
-| 5.3.5 | AI Module | 45 |
-| 6 | CHAPTER 6: FUTURE SCOPE AND CONCLUSION | 46 |
-| 6.1 | Future Scope | 46 |
-| 6.1.1 | Video Consultations | 46 |
-| 6.1.2 | Payment Integration | 47 |
-| 6.1.3 | Electronic Health Records | 47 |
-| 6.1.4 | Database Integration | 48 |
-| 6.1.5 | Mobile App | 48 |
-| 6.1.6 | AI Enhancements | 49 |
-| 6.2 | Conclusion | 49 |
-| 7 | APPENDIX A: SAMPLE CODE | 51 |
-| 8 | APPENDIX B: SCREENSHOTS DESCRIPTIONS | 55 |
-| 9 | APPENDIX C: WEEKLY INTERNSHIP LOG | 56 |
-| 10 | BIBLIOGRAPHY | 58 |
+| 2.2.5 | Axios for API Calls | 12 |
+| 2.2.6 | Additional Libraries | 13 |
+| 2.3 | Backend Technologies | 13 |
+| 2.3.1 | Node.js | 14 |
+| 2.3.2 | Express.js Framework | 14 |
+| 2.3.3 | JWT Authentication | 15 |
+| 2.3.4 | Other Backend Libraries | 15 |
+| 2.4 | Database Technologies | 16 |
+| 2.5 | Deployment Technologies | 16 |
+| 2.5.1 | Vercel for Frontend | 17 |
+| 2.5.2 | Render for Backend | 17 |
+| 2.6 | Development Tools | 18 |
+| 2.7 | Summary of Technology Stack | 19 |
+| 3 | CHAPTER 3: DATA COLLECTION AND ANALYSIS | 20 |
+| 3.1 | Data Collection Methodology | 20 |
+| 3.1.1 | Hospital Data Collection | 21 |
+| 3.1.2 | Doctor Data Collection | 22 |
+| 3.1.3 | User Data Requirements | 23 |
+| 3.2 | Data Preprocessing Techniques | 23 |
+| 3.3 | Feature Engineering | 24 |
+| 3.4 | Exploratory Data Analysis | 25 |
+| 3.4.1 | Distribution Analysis | 25 |
+| 3.4.2 | Statistical Summary | 26 |
+| 3.5 | Data Validation | 27 |
+| 4 | CHAPTER 4: SYSTEM REQUIREMENTS AND ANALYSIS | 28 |
+| 4.1 | System Requirements Specification | 28 |
+| 4.1.1 | Functional Requirements | 29 |
+| 4.1.2 | Non-Functional Requirements | 32 |
+| 4.1.3 | User Interface Requirements | 34 |
+| 4.1.4 | Security Requirements | 35 |
+| 4.2 | Hardware Requirements | 36 |
+| 4.2.1 | Minimum Hardware Requirements | 36 |
+| 4.2.2 | Recommended Hardware Requirements | 37 |
+| 4.3 | Software Requirements | 37 |
+| 4.3.1 | Operating System Requirements | 38 |
+| 4.3.2 | Development Software Requirements | 38 |
+| 4.4 | System Overview and Architecture | 39 |
+| 4.4.1 | System Architecture Diagram | 39 |
+| 4.4.2 | Technology Architecture | 40 |
+| 4.4.3 | Network Architecture | 41 |
+| 4.5 | System Modules and Components | 42 |
+| 4.5.1 | Authentication Module | 42 |
+| 4.5.2 | Hospital Module | 43 |
+| 4.5.3 | Doctor Module | 43 |
+| 4.5.4 | Appointment Module | 44 |
+| 4.5.5 | AI Module | 44 |
+| 4.5.6 | Health Records Module | 45 |
+| 4.6 | Use Case Diagram and Description | 46 |
+| 5 | CHAPTER 5: IMPLEMENTATION | 47 |
+| 5.1 | System Design and Algorithms | 47 |
+| 5.1.1 | User Authentication Flow | 48 |
+| 5.1.2 | Hospital Listing Flow | 49 |
+| 5.1.3 | Doctor Search Algorithm | 50 |
+| 5.1.4 | Appointment Booking Algorithm | 51 |
+| 5.1.5 | AI Symptom Checker Algorithm | 52 |
+| 5.2 | Database Schema Design | 53 |
+| 5.2.1 | User Schema | 53 |
+| 5.2.2 | Hospital Schema | 54 |
+| 5.2.3 | Doctor Schema | 55 |
+| 5.2.4 | Appointment Schema | 56 |
+| 5.3 | API Endpoint Design | 57 |
+| 5.3.1 | Authentication Endpoints | 57 |
+| 5.3.2 | Hospital Endpoints | 58 |
+| 5.3.3 | Doctor Endpoints | 59 |
+| 5.3.4 | Appointment Endpoints | 60 |
+| 5.3.5 | AI Endpoints | 61 |
+| 5.4 | User Interface Implementation | 62 |
+| 5.4.1 | Landing Page Implementation | 62 |
+| 5.4.2 | Login and Registration Pages | 63 |
+| 5.4.3 | Dashboard Implementation | 64 |
+| 5.4.4 | Hospital and Doctor Pages | 65 |
+| 5.4.5 | AI Features Implementation | 66 |
+| 5.5 | Module Description | 67 |
+| 5.5.1 | Authentication Module Details | 67 |
+| 5.5.2 | Hospital Module Details | 68 |
+| 5.5.3 | Doctor Module Details | 69 |
+| 5.5.4 | Appointment Module Details | 70 |
+| 5.5.5 | AI Module Details | 71 |
+| 6 | CHAPTER 6: TESTING AND RESULTS | 72 |
+| 6.1 | Testing Strategy | 72 |
+| 6.1.1 | Unit Testing | 73 |
+| 6.1.2 | Integration Testing | 74 |
+| 6.1.3 | System Testing | 75 |
+| 6.1.4 | Acceptance Testing | 76 |
+| 6.2 | Test Cases and Results | 77 |
+| 6.2.1 | Authentication Test Cases | 77 |
+| 6.2.2 | Hospital Module Test Cases | 78 |
+| 6.2.3 | Doctor Module Test Cases | 79 |
+| 6.2.4 | Appointment Test Cases | 80 |
+| 6.2.5 | AI Feature Test Cases | 81 |
+| 6.3 | User Acceptance Testing | 82 |
+| 6.4 | Performance Testing Results | 83 |
+| 6.5 | Security Testing | 84 |
+| 6.6 | Bug Fixes and Improvements | 85 |
+| 7 | CHAPTER 7: FUTURE SCOPE AND CONCLUSION | 86 |
+| 7.1 | Future Enhancements | 86 |
+| 7.1.1 | Video Consultation Feature | 87 |
+| 7.1.2 | Payment Gateway Integration | 88 |
+| 7.1.3 | Electronic Health Records | 89 |
+| 7.1.4 | MongoDB Integration | 90 |
+| 7.1.5 | Mobile Application Development | 91 |
+| 7.1.6 | Advanced AI Features | 92 |
+| 7.2 | Limitations of Current System | 93 |
+| 7.3 | Lessons Learned | 94 |
+| 7.4 | Conclusion | 95 |
+| 7.5 | Project Achievements | 96 |
+| 7.6 | Career Growth and Implications | 97 |
+| 8 | CHAPTER 8: CHALLENGES AND SOLUTIONS | 98 |
+| 8.1 | Technical Challenges Faced | 98 |
+| 8.1.1 | API Integration Challenges | 99 |
+| 8.1.2 | Authentication Problems | 100 |
+| 8.1.3 | Responsive Design Issues | 101 |
+| 8.1.4 | State Management Complexity | 102 |
+| 8.1.5 | Deployment Challenges | 103 |
+| 8.2 | Non-Technical Challenges | 104 |
+| 8.2.1 | Time Management | 104 |
+| 8.2.2 | Documentation | 105 |
+| 8.2.3 | Testing Limitations | 106 |
+| 8.3 | Solutions Implemented | 107 |
+| 9 | CHAPTER 9: LEARNING OUTCOMES AND SKILLS | 108 |
+| 9.1 | Technical Skills Acquired | 108 |
+| 9.1.1 | Frontend Development Skills | 109 |
+| 9.1.2 | Backend Development Skills | 110 |
+| 9.1.3 | Database Skills | 111 |
+| 9.1.4 | DevOps Skills | 112 |
+| 9.2 | Soft Skills Developed | 113 |
+| 9.2.1 | Communication Skills | 113 |
+| 9.2.2 | Problem Solving Skills | 114 |
+| 9.2.3 | Time Management Skills | 115 |
+| 9.2.4 | Teamwork Skills | 116 |
+| 9.3 | Industry Knowledge Gained | 117 |
+| 9.4 | Certifications Obtained | 118 |
+| 10 | APPENDIX A: WEEKLY INTERNSHIP LOG | 119 |
+| 10.1 | Week 1 Activities | 119 |
+| 10.2 | Week 2 Activities | 120 |
+| 10.3 | Week 3 Activities | 121 |
+| 10.4 | Week 4 Activities | 122 |
+| 10.5 | Week 5 Activities | 123 |
+| 10.6 | Week 6 Activities | 124 |
+| 10.7 | Week 7 Activities | 125 |
+| 10.8 | Week 8 Activities | 126 |
+| 11 | APPENDIX B: SAMPLE CODE | 127 |
+| 11.1 | Main Application Code | 127 |
+| 11.2 | API Configuration | 128 |
+| 11.3 | Server Setup Code | 129 |
+| 11.4 | Authentication Routes | 130 |
+| 11.5 | Sample Components | 131 |
+| 12 | APPENDIX C: PROJECT SCREENSHOTS DESCRIPTIONS | 132 |
+| 13 | APPENDIX D: DEPLOYMENT DETAILS | 133 |
+| 14 | BIBLIOGRAPHY | 134 |
 
 ---
 
@@ -630,84 +723,49 @@ The Healthcare Platform solves these problems by providing a comprehensive digit
 
 # CHAPTER 2: TOOLS AND TECHNOLOGY USED
 
-## 2.1 Introduction
+## 2.1 Introduction to Technologies
 
-This chapter describes the tools and technologies used in developing the Healthcare Platform. The project utilizes a modern technology stack focused on JavaScript development, enabling rapid prototyping and easy deployment.
+This chapter provides an in-depth overview of all the tools, technologies, and frameworks used in developing the Healthcare Platform. The selection of appropriate technology stack was crucial for the successful implementation of the project. This section details each technology, its version, purpose, and how it was utilized during the development process. The modern JavaScript-based technology stack was chosen for its popularity, community support, and ease of development. The following subsections provide detailed information about each technology used in both frontend and backend development. Understanding these technologies is essential for maintaining and extending the application in the future. Each technology brings unique capabilities to the project and contributes to the overall functionality of the healthcare platform.
 
 ## 2.2 Frontend Technologies
 
-### 2.2.1 React
+The frontend of the Healthcare Platform was built using React, a powerful JavaScript library for building user interfaces. The selection of React was based on its component-based architecture, virtual DOM for better performance, and strong community support. The use of modern React features such as hooks for state management and side effects handling made development efficient and code maintainable. React's ecosystem provides numerous libraries that extend its functionality, making it suitable for complex applications like healthcare platforms. The component-based approach also promotes code reusability and easier maintenance.
 
-React is a JavaScript library for building user interfaces. It was chosen for this project due to:
+### 2.2.1 React.js Framework
 
-- Component-based architecture
-- Virtual DOM for performance
-- Large ecosystem of libraries
-- Strong community support
-
-React version 18.2.0 was used in this project.
+React.js is currently one of the most popular JavaScript libraries for building user interfaces. Developed by Facebook (now Meta), React has become the go-to choice for single-page applications. The Healthcare Platform uses React version 18.2.0, which includes significant improvements and new features. React's virtual DOM implementation ensures efficient updates by minimizing actual DOM manipulations. The component-based architecture allows developers to create reusable UI components that can be composed to build complex interfaces. State management in React is handled through hooks like useState for local state and useContext for global state. The useEffect hook manages side effects like data fetching and subscriptions. React Router DOM handles client-side routing, enabling navigation without page reloads. The extensive ecosystem of React includes numerous libraries for forms, animations, and UI components. The React developer tools for browsers significantly aid in debugging and performance optimization.
 
 ### 2.2.2 Tailwind CSS
 
-Tailwind CSS is a utility-first CSS framework that enables rapid UI development. Key benefits include:
-
-- No need to write custom CSS
-- Consistent styling through utility classes
-- Easy responsiveness
-- Small bundle size
-
-The project uses Tailwind CSS v3.4.0.
+Tailwind CSS is a utility-first CSS framework that enables rapid UI development without writing custom CSS. Unlike traditional CSS approaches, Tailwind provides low-level utility classes that can be composed to create custom designs directly in markup. This approach significantly improves developer productivity and ensures consistent styling across the application. The Healthcare Platform uses Tailwind CSS version 3.4.0. Key features include responsive design utilities that make mobile-first development straightforward, custom configuration for project-specific designs, dark mode support, and extensive color palette. The framework's small bundle size is achieved through tree shaking, removing unused styles in production. Tailwind's JIT (Just-In-Time) compiler ensures fast builds during development. The integration with PostCSS enables seamless processing of Tailwind classes.
 
 ### 2.2.3 Framer Motion
 
-Framer Motion is a library for animations in React. It provides:
-
-- Smooth transitions
-- Gesture animations
-- Page transitions
-- Loading animations
+Framer Motion is a powerful animation library for React that makes creating complex animations simple. The Healthcare Platform uses Framer Motion to provide smooth transitions and engaging animations that enhance user experience. Framer Motion's declarative API makes animation code readable and maintainable. Key features include layout animations that automatically animate element positions, gesture animations that respond to user interactions, exit animations for smooth component unmounting, and shared element transitions. The library leverages React's animation capabilities while maintaining performance through optimized rendering. Framer Motion also provides spring-based animations that feel more natural than traditional easing functions.
 
 ### 2.2.4 React Router DOM
 
-React Router DOM enables navigation in the single-page application:
+React Router DOM is the standard routing library for React applications. It enables client-side routing in single-page applications without page reloads. The Healthcare Platform uses React Router DOM version 6.20.1 for navigation between different pages. Key features include declarative routing with JSX components, dynamic route parameters for dynamic content, nested routes for complex layouts, and route guards for protected pages. The NavLink component provides active styling for current routes. Programmatic navigation is supported through the useNavigate hook. The library also provides hooks for accessing route information in components.
 
-- Client-side routing
-- Dynamic routing
-- Route guards
+### 2.2.5 Axios for API Calls
 
-### 2.2.5 Axios
+Axios is a promise-based HTTP client for browser and Node.js. It provides a simple API for making HTTP requests and automatically handles JSON transformation. The Healthcare Platform uses Axios version 1.6.2 for communication with the backend API. Key features include request and response interceptors for adding common functionality like authentication headers, automatic error handling with descriptive error messages, and support for both browser and Node.js environments. Axios simplifies request configuration with global defaults and custom instances. The library also supports cancellation of requests, which is useful for handling component unmounts.
 
-Axios is used for HTTP requests:
+### 2.2.6 Additional Frontend Libraries
 
-- Simplified API calls
-- Automatic JSON transformation
-- Request/Response interceptors
-
-### 2.2.6 Additional Libraries
-
-- **AOS**: Scroll animations
-- **Lucide React**: Icon library
-- **React Hot Toast**: Notification toasts
-- **React DatePicker**: Date selection
-- **React Select**: Dropdown selections
+The Healthcare Platform utilizes several additional libraries to enhance functionality and user experience. These include AOS (Animate On Scroll) for scroll-triggered animations, Lucide React for consistent iconography, React Hot Toast for notification toasts, React DatePicker for date selection, and React Select for dropdown menus. Each library was selected based on its popularity, documentation quality, and compatibility with the existing technology stack.
 
 ## 2.3 Backend Technologies
 
+The backend of the Healthcare Platform was built using Node.js and Express, providing a robust server-side foundation. The selection of Node.js was natural given the consistent use of JavaScript throughout the technology stack. This enables sharing of code and utilities between frontend and backend. The backend handles API requests, manages data, and integrates with various services. Express provides a minimal yet extensible framework for building APIs.
+
 ### 2.3.1 Node.js
 
-Node.js is a JavaScript runtime built on Chrome's V8 engine. It enables:
+Node.js is a JavaScript runtime built on Chrome's V8 engine. It enables executing JavaScript on the server side, opening possibilities for full-stack JavaScript development. The Healthcare Platform uses Node.js for the backend server, handling HTTP requests, and managing the application logic. Node.js's event-driven, non-blocking I/O model makes it suitable for I/O-intensive applications like web APIs. The vast npm ecosystem provides access to thousands of packages for various functionalities. Node.js version 18+ is recommended for the backend, providing modern JavaScript features and improved performance.
 
-- Server-side JavaScript
-- Non-blocking I/O
-- Large npm ecosystem
+### 2.3.2 Express.js Framework
 
-### 2.3.2 Express
-
-Express is a minimal and flexible Node.js web application framework:
-
-- Routing middleware
-- Template engines
-- Error handling
+Express.js is a minimal and flexible Node.js web application framework. It provides robust features for web and mobile applications, including routing, middleware support, and template engines. Express simplifies API development by providing a clean API for handling HTTP requests and responses. Middleware functions can be added at any point in the request-response cycle, enabling cross-cutting concerns like authentication and logging. Express's routing system supports parameter routes, query strings, and route handlers. The framework is extensible with numerous middleware packages available through npm.
 
 ### 2.3.3 Other Backend Libraries
 
@@ -815,30 +873,57 @@ User authentication requires:
 - City (optional)
 - Phone (optional)
 
-## 3.2 Data Preprocessing
+## 3.2 Data Preprocessing Techniques
 
-The data collected undergoes preprocessing:
+The data collected from various sources undergoes several preprocessing steps to ensure quality and consistency. This section details the preprocessing techniques applied to the collected data. Data preprocessing is crucial for maintaining data quality and ensuring accurate results from any analysis or feature engineering performed on the data. The preprocessing pipeline includes several stages, each addressing specific data quality issues. Proper preprocessing ensures that the application provides accurate and reliable information to users. The following subsections describe each preprocessing step in detail.
 
-1. **Validation**: Check for required fields
-2. **Normalization**: Standardize city names
-3. **Rating Calculation**: Convert to 5-point scale
-4. **Specialty Mapping**: Group by medical specialties
+### 3.2.1 Data Validation
+
+Data validation ensures that all required fields are present and contain valid data types. Every record entering the system undergoes validation checks. For hospital data, validation ensures that names, addresses, and contact information are present. For doctor data, validation checks professional qualifications, experience years, and consultation fees are in valid ranges. User data validation includes email format checking and password strength validation. Invalid records are flagged and corrected or removed from the dataset.
+
+### 3.2.2 Data Normalization
+
+Data normalization standardizes data formats across different sources. City names are normalized to consistent formats, ensuring that variations like "Bangalore" and "Bengaluru" are treated as the same city. Hospital names are normalized to remove extra whitespace and standardize abbreviations. Doctor names have consistent formatting with proper titles. Rating values are normalized to a 5-point scale for consistent display.
+
+### 3.2.3 Rating Calculation
+
+Rating values from different sources are normalized to a 5-point scale. Individual ratings from various sources are weighted and averaged. The calculated ratings provide users with consistent information for comparison. The rating calculation considers recency, with more recent ratings having higher weight. Outliers are identified and handled appropriately to prevent skewed results.
+
+### 3.2.4 Specialty Mapping
+
+Medical specialties are mapped to standardized categories. This enables consistent filtering and search across different specialty names. Primary and secondary specialty designations help with hierarchical filtering. Specialty mapping also supports the AI symptom checker by mapping symptoms to relevant medical departments.
 
 ## 3.3 Feature Engineering
 
-Key features engineered for the application:
+Feature engineering creates derived features from raw data to improve application functionality. These engineered features enhance user experience and enable advanced functionality. Feature engineering is a crucial step that transforms raw data into meaningful information. The following features were engineered for the Healthcare Platform.
 
-1. **Search Filters**: City, specialty, fee range
-2. **Ratings Display**: Star ratings with reviews
-3. **Availability Status**: Online/Offline consultation
-4. **Emergency Indicators**: 24/7 service flags
+### 3.3.1 Search Filters
+
+Dynamic search filters are created based on available data. City filters allow users to narrow results to their preferred location. Specialty filters enable searching for specific medical departments. Fee range filters help users find doctors within their budget. The combination of filters provides powerful search capabilities.
+
+### 3.3.2 Rating Display
+
+Comprehensive rating displays show both numerical ratings and visual indicators. Star ratings provide quick visual feedback. Rating counts help users assess the reliability of ratings. Review summaries provide context behind ratings.
+
+### 3.3.3 Availability Status
+
+Real-time availability status for doctors shows consultation types. Online consultation indicators help users choose remote options. Offline consultation tags prevent disappointment from unavailable doctors. Both in-person and video consultation options are clearly labeled.
+
+### 3.3.4 Emergency Indicators
+
+24/7 availability flags help users find emergency services quickly. Emergency contact information is prominently displayed. Hospital emergency department status is prominently shown. Emergency service numbers are easily accessible from every page.
 
 ## 3.4 Exploratory Data Analysis
 
+Exploratory data analysis helps understand data characteristics and distributions. This analysis guides feature prioritization and user interface design. Understanding data distributions helps optimize the application for common use cases.
+
 ### 3.4.1 Distribution Analysis
 
-- Urban concentration: 60% in Bangalore, 40% in Mangalore
-- Fee range: ₹400 - ₹1200
+The distribution analysis reveals key patterns in the data. Geographic distribution shows 60% of hospitals in Bangalore and 40% in Mangalore. Fee distribution ranges from ₹400 to ₹1200, with most doctors in the ₹500-₹800 range. Specialty distribution shows general medicine and cardiology as most common. The analysis reveals that specialist doctors are more popular in Bangalore.
+
+### 3.4.2 Statistical Summary
+
+Statistical summaries provide quick insights for users. The average rating across all hospitals is 4.6 out of 5. Average experience of doctors is 12 years. The average consultation fee is approximately ₹750. These statistics help users make informed decisions when selecting healthcare providers.
 - Average rating: 4.6/5.0
 
 ### 3.4.2 User Behavior
