@@ -1,6 +1,6 @@
 # INTERNSHIP REPORT
 # ON
-# WEB APPLICATION DEVELOPMENT
+# WEB APPLICATION DEVELOPMENT - HEALTHCARE PLATFORM
 
 ---
 
@@ -10,8 +10,7 @@ Bengaluru, Karnataka, India
 
 Under the guidance of
 **Ms. Akshatha**
-Guide, Department of Computer Science
-Yenepoya Institute of Arts, Science, Commerce & Management
+Internal Guide, Department of Computer Science
 
 Submitted by
 **MOHAMMED MAYISH**
@@ -29,11 +28,11 @@ Deralakatte, Mangaluru – 575018, Karnataka, India
 
 # CERTIFICATE
 
-This is to certify that the project work entitled "Web Application Development - Healthcare Platform" has been successfully carried out at "Persevex Education Consultancy LLP" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (AI CC & DevOps with TCS), under the supervision and guidance of **Ms. Akshatha**, Internal Guide, Department of Computer Science, Yenepoya Institute of Arts, Science, Commerce and Management. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application by Yenepoya (Deemed to be university) during academic year 2025-26.
+This is to certify that the project work entitled "Web Application Development - Healthcare Platform" has been successfully carried out at "PERSEVERX EDUCATION CONSULTANCY LLP" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (AI CC & DevOps with TCS), under the supervision and guidance of **Ms. Akshatha**, Internal Guide, Department of Computer Science, Yenepoya Institute of Arts, Science, Commerce and Management. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application by Yenepoya (Deemed to be university) during academic year 2025-26.
 
-Internal Guide:                Ms. Akshatha                Chairperson
+Internal Guide:                                            Chairperson
 
-Internal Examiner:            External Examiner
+Internal Examiner:                                        External Examiner
 
 PRINCIPAL
 Dr. Jeevan Raj
@@ -41,18 +40,18 @@ The Yenepoya Institute of Arts,
 Science, Commerce and Management
 (Deemed To be university)
 
-Submitted for the Viva-Voce          Place: Mangalore
-Examination held on:              Date: April 2026
+Submitted for the Viva-Voce                           Place: Mangalore
+Examination held on:                                 Date: April 2026
 
 ---
 
 # DECLARATION
 
-I hereby declare that this internship report titled "Web Application Development - Healthcare Platform" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
+I, **MOHAMMED MAYISH**, a student of BCA (AI CC & DevOps with TCS) at Yenepoya Institute of Arts, Science, Commerce, and Management, Balmatta, Mangalore, affiliated with Yenepoya (Deemed to be University), hereby declare that this internship report titled "Web Application Development - Healthcare Platform" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
 
-This report documents the knowledge, skills, and practical experience acquired during my internship at Perseverx Education Consultancy LLP. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in healthcare technology, web development, and AI-powered health solutions.
+This report documents the knowledge, skills, and practical experience acquired during my internship at PERSEVERX EDUCATION CONSULTANCY LLP. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in web development, healthcare technology, and AI integration.
 
-I extend my sincere gratitude to AKSHTAA S, Project Mentor, for her valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
+I extend my sincere gratitude to **Mithun**, Internship Head, for his valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to PERSEVERX EDUCATION CONSULTANCY LLP for providing an enriching environment and exposure to real-world web development operations.
 
 Furthermore, I acknowledge the support and encouragement received from my institutional guide, **Ms. Akshatha**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
 
@@ -65,14 +64,14 @@ Date: ___________
 Internship Supervisor Signature:
 Name: Mithun
 Designation: Internship Head
-Organization: Perseverx Education LLP
+Organization: PERSEVERX EDUCATION CONSULTANCY LLP
 Date: ___________
 
 ---
 
 Institution Guide Signature:
 
-Name: AKSHTAA S
+Name: Ms. Akshatha
 Institute: Yenepoya Institute of Arts, Science, Commerce, and Management
 Date: ___________
 
@@ -90,9 +89,9 @@ I sincerely express my gratitude to Yenepoya Institute of Arts, Science, Commerc
 
 I extend my heartfelt thanks to Dr. Jeevan Raj, Principal, for his continuous support and guidance in facilitating this learning opportunity. I also express my sincere appreciation to Dr. Rathnakara Shetty P, Head of Department (Computer Science), for his encouragement and academic support throughout my internship journey.
 
-I am deeply grateful to **MEDICARE AI** and **Ms. Akshatha**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to Ms. Akshatha, for her invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
+I am deeply grateful to **PERSEVERX EDUCATION CONSULTANCY LLP** and **Mithun**, Internship Head, for their visionary leadership and for fostering a dynamic learning environment in web development and technology. A special note of appreciation goes to the mentors at PERSEVERX, for their invaluable mentorship, expert guidance, and for sharing their vast experience in the field of web development and AI.
 
-I also extend my sincere gratitude to the **MEDICARE AI Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of healthcare application development and AI integration.
+I also extend my sincere gratitude to the **PERSEVERX Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of web application development and modern technologies.
 
 I am also thankful to my internal guide, **Ms. Akshatha**, for her academic mentorship and for providing valuable insights that helped bridge the gap between theoretical learning and practical application.
 
@@ -103,15 +102,94 @@ Date: ___________
 
 ---
 
+# INTERNSHIP OFFER LETTER
+
+[To be attached from the organization]
+
+---
+
+# INTERNSHIP COMPLETION CERTIFICATE
+
+[To be attached from the organization]
+
+---
+
+# COMPANY PROFILE: PERSEVERX EDUCATION CONSULTANCY LLP
+
+PERSEVERX Education Consultancy LLP is a premier educational technology company based in Bengaluru, Karnataka, India. The company specializes in providing innovative solutions in web development, AI integration, and technology consulting. PERSEVERX offers internship opportunities to students from various colleges, providing hands-on experience in cutting-edge technologies and real-world project development.
+
+The company focuses on:
+- Web Application Development
+- AI and Machine Learning Solutions
+- Cloud Computing
+- DevOps Implementation
+- Technology Consulting
+
+---
+
+# ROLES AND RESPONSIBILITIES
+
+During my internship at PERSEVERX EDUCATION CONSULTANCY LLP, my roles and responsibilities included:
+
+1. **Frontend Development**: Developing responsive web pages using React and Tailwind CSS
+2. **Backend Development**: Creating API endpoints using Node.js and Express
+3. **Integration**: Connecting frontend with backend services
+4. **Testing**: Debugging and fixing application errors
+5. **Deployment**: Deploying applications to cloud platforms
+6. **Documentation**: Writing technical documentation
+7. **Code Reviews**: Participating in code review sessions
+8. **Team Collaboration**: Working with team members on projects
+
+---
+
+# LEARNING OUTCOMES
+
+Through this internship, I learned:
+
+1. **React Framework**: Component-based UI development
+2. **Node.js**: Server-side JavaScript programming
+3. **Express.js**: API development and routing
+4. **Tailwind CSS**: Modern CSS styling
+5. **Version Control**: Git and GitHub workflows
+6. **Deployment**: Vercel and Render cloud platforms
+7. **Problem Solving**: Debugging and optimization
+8. **Documentation**: Technical writing skills
+
+---
+
+# WEEKLY INTERNSHIP LOG
+
+| Week | Activity |
+|------|----------|
+| Week 1 | Project Initialization, Requirements Gathering, Environment Setup |
+| Week 2 | React Basics, Component Structure, Routing Setup |
+| Week 3 | Authentication Module, Registration/Login Pages |
+| Week 4 | Hospital and Doctor Data Integration |
+| Week 5 | Appointment Booking System |
+| Week 6 | AI Symptom Checker Implementation |
+| Week 7 | Dashboard and UI Enhancements |
+| Week 8 | Testing, Bug Fixing, Deployment, Documentation |
+
+---
+
+# CERTIFICATIONS & OTHER ACTIVITIES
+
+- Completed React Fundamentals Training
+- Completed Node.js Backend Development Training
+- Participated in Code Review Sessions
+- Attended Technology Webinars
+
+---
+
 # ABSTRACT
 
-The healthcare sector in India has witnessed significant transformation through digital innovation, particularly in urban centers like Mangalore and Bangalore. This internship report presents the development of a web application designed to provide healthcare services through a digital platform. The application provides a unified platform for patients to access hospital information, doctor profiles, appointment booking, and AI-powered health assistance.
+The healthcare sector in India has witnessed significant transformation through digital innovation. This internship report presents the development of a web application designed to provide healthcare services through a digital platform.
 
-During this internship, I worked on developing various features including user authentication, hospital and doctor listings, appointment booking system, and a responsive dashboard. The project was deployed using Vercel for the frontend and Render for the backend.
+The Healthcare Platform is a comprehensive web application that enables users to find hospitals, book appointments with doctors, access AI-powered symptom checking, and manage health records. The application uses React for the frontend, Node.js for the backend, and is deployed on Vercel and Render cloud platforms.
 
-This report documents the entire development process, from requirements gathering to deployment, along with the challenges faced and solutions implemented. The final application provides a seamless healthcare experience for users in Mangalore and Bangalore.
+During this internship, I worked on various features including user authentication, hospital and doctor listings, appointment booking, AI symptom checker, and a responsive dashboard. The project demonstrates proficiency in full-stack web development and deployment.
 
-**Keywords:** Healthcare, React, Node.js, AI, Hospitals, Doctors, Appointments
+**Keywords:** Healthcare, React, Node.js, AI, Hospitals, Doctors, Appointments, Web Development
 
 ---
 
@@ -182,11 +260,11 @@ This report documents the entire development process, from requirements gatherin
 
 Healthcare in India has undergone a massive transformation in recent years, especially with the rise of digital technology. Urban centers like Mangalore and Bangalore have seen numerous hospitals and healthcare providers emerge, making it challenging for patients to find the right medical care. The traditional process of visiting hospitals physically, waiting in long queues, and manually booking appointments has become increasingly inconvenient.
 
-In response to these challenges, digital healthcare solutions have gained prominence across the country. the Healthcare Platform project represents an innovative approach to address these issues by providing a unified platform where patients can access healthcare services seamlessly.
+In response to these challenges, digital healthcare solutions have gained prominence across the country. The Healthcare Platform project represents an innovative approach to address these issues by providing a unified platform where patients can access healthcare services seamlessly.
 
 The motivation behind developing the Healthcare Platform project stems from the need to simplify healthcare access in Tier 1 and Tier 2 Indian cities. Many patients struggle to find the right doctor, compare hospital facilities, or book appointments online. Existing solutions are often fragmented, requiring patients to visit multiple websites or make numerous phone calls.
 
-the Healthcare Platform project aims to consolidate these services into a single, user-friendly platform. The application provides access to hospitals in Mangalore and Bangalore,including renowned institutions like KMC Hospital, Father Muller Medical College Hospital, Manipal Hospital, and Fortis Hospital.
+The Healthcare Platform aims to consolidate these services into a single, user-friendly platform. The application provides access to hospitals in Mangalore and Bangalore, including renowned institutions like KMC Hospital, Father Muller Medical College Hospital, Manipal Hospital, and Fortis Hospital.
 
 The platform addresses several key challenges in the current healthcare ecosystem:
 
@@ -233,7 +311,7 @@ The project serves as a bridge between academic learning and industry implementa
 
 ## 1.4 Scope
 
-The scope of the Healthcare Platform project includes:
+The scope of the Healthcare Platform includes:
 
 **Features Implemented:**
 - User Registration and Login
@@ -279,7 +357,7 @@ The problem this project addresses is the fragmented nature of healthcare access
 4. **Health Records**: Paper-based records that are easily lost
 5. **Emergency Access**: No quick access to emergency services
 
-the Healthcare Platform project solves these problems by providing a comprehensive digital platform.
+The Healthcare Platform solves these problems by providing a comprehensive digital platform.
 
 ---
 
@@ -287,7 +365,7 @@ the Healthcare Platform project solves these problems by providing a comprehensi
 
 ## 2.1 Introduction
 
-This chapter describes the tools and technologies used in developing the Healthcare Platform project. The project utilizes a modern technology stack focused on JavaScript development, enabling rapid prototyping and easy deployment.
+This chapter describes the tools and technologies used in developing the Healthcare Platform. The project utilizes a modern technology stack focused on JavaScript development, enabling rapid prototyping and easy deployment.
 
 ## 2.2 Frontend Technologies
 
@@ -412,7 +490,7 @@ The primary IDE used for development with extensions for:
 
 - ESLint
 - Prettier
-- GitHubcopilot
+- GitHub Copilot
 
 ### 2.6.2 Git
 
@@ -567,10 +645,7 @@ Key features engineered for the application:
 The system follows a client-server architecture:
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Client   │────▶│   Server   │────▶│  Database  │
-│  (React)   │◀────│  (Node.js) │◀────│  (Memory)  │
-└─────────────┘     └─���─���─────────┘     └─────────────┘
+Client (React)  <-->  Server (Node.js)  <-->  Database (Memory)
 ```
 
 ### 4.3.2 Technology Stack
@@ -602,41 +677,41 @@ The system follows a client-server architecture:
 
 ```
 START
-  │
-  ▼
+  |
+  v
 User Input Email/Password
-  │
-  ▼
+  |
+  v
 Validate Input
-  │
-  ├──▶ Invalid ──▶ Show Error
-  │
-  ▼
+  |
+  +--> Invalid ---> Show Error
+  |
+  v
 Valid
-  │
-  ▼
+  |
+  v
 Check Database
-  │
-  ├──▶ Not Found ──▶ Register New User
-  │
-  ▼
+  |
+  +--> Not Found ---> Register New User
+  |
+  v
 Found
-  │
-  ▼
+  |
+  v
 Compare Password
-  │
-  ├──▶ Invalid ──▶ Show Error
-  │
-  ▼
+  |
+  +--> Invalid ---> Show Error
+  |
+  v
 Valid
-  │
-  ▼
+  |
+  v
 Generate JWT Token
-  │
-  ▼
+  |
+  v
 Return Token + User Data
-  │
-  ▼
+  |
+  v
 END
 ```
 
@@ -644,56 +719,36 @@ END
 
 ```
 START
-  │
-  ▼
+  |
+  v
 Select Doctor
-  │
-  ▼
+  |
+  v
 View Available Slots
-  │
-  ▼
+  |
+  v
 Select Date/Time
-  │
-  ▼
+  |
+  v
 Confirm Booking
-  │
-  ▼
+  |
+  v
 Create Appointment Record
-  │
-  ▼
+  |
+  v
 Send Confirmation
-  │
-  ▼
+  |
+  v
 END
 ```
 
 ### 5.1.3 Database Schema
 
-#### User Schema
-```javascript
-{
-  _id: ObjectId,
-  name: String,
-  email: String (unique),
-  password: String (hashed),
-  phone: String,
-  city: String,
-  createdAt: Date
-}
 ```
-
-#### Appointment Schema
-```javascript
-{
-  _id: ObjectId,
-  doctorId: String,
-  userId: String,
-  date: Date,
-  time: String,
-  type: String,
-  status: String,
-  createdAt: Date
-}
+User: { _id, name, email, password, phone, city, createdAt }
+Appointment: { _id, doctorId, userId, date, time, type, status, createdAt }
+Hospital: { _id, name, city, address, phone, specialties, rating }
+Doctor: { _id, name, specialization, qualification, experience, city, hospital, fee, rating }
 ```
 
 ## 5.2 Workflow/Process Diagrams
@@ -701,28 +756,13 @@ END
 ### 5.2.1 Main Application Flow
 
 ```
-┌──────────────┐
-│   Landing    │
-│    Page     │
-└──────┬───────┘
-       │
-       ▼
-┌──────────────┐     ┌──────────────┐
-│   Login/     │────▶│  Dashboard  │
-│  Register   │     └──────┬───────┘
-└──────────────┘            │
-      │                    │
-      ▼                    ▼
-┌──────────────┐     ┌──────────────┐
-│ Hospitals   │     │  Appoint-   │
-│ Doctors    │     │   ments    │
-└──────────────┘     └──────────────┘
-       │                    │
-       ▼                    ▼
-┌──────────────┐     ┌──────────────┐
-│ AI Symptom  │     │   Health    │
-│ Checker    │     │   Records   │
-└──────────────┘     └──────────────┘
+Landing Page --> Login/Register --> Dashboard
+                              |
+                              v
+                         Hospitals --> Doctors --> Book Appointment
+                         |
+                         v
+                      AI Chat --> Symptom Checker
 ```
 
 ### 5.2.2 API Endpoints
@@ -733,13 +773,9 @@ END
 | POST | /api/auth/login | User login |
 | GET | /api/auth/me | Get current user |
 | GET | /api/hospitals | List hospitals |
-| GET | /api/hospitals/:id | Hospital details |
 | GET | /api/doctors | List doctors |
-| GET | /api/doctors/:id | Doctor details |
-| GET | /api/doctors/:id/slots | Available slots |
 | POST | /api/appointments | Book appointment |
 | GET | /api/appointments | User appointments |
-| PUT | /api/appointments/:id/cancel | Cancel appointment |
 | POST | /api/ai/symptom-checker | Check symptoms |
 | POST | /api/ai/chat | AI chat |
 
@@ -805,21 +841,6 @@ END
 - `backend/routes/aiRoutes.js`
 - `frontend/src/pages/AIChatPage.jsx`
 
-### 5.3.6 User Interface
-
-**Pages:**
-- Landing Page
-- Login/Register
-- Dashboard
-- Hospitals
-- Doctors
-- Appointments
-- AI Chat
-- Symptom Checker
-- Health Records
-- Profile
-- Emergency
-
 ---
 
 # CHAPTER 6: FUTURE SCOPE AND CONCLUSION
@@ -884,8 +905,6 @@ The Healthcare Platform project successfully demonstrates a comprehensive health
 2. **Hospital Visibility**: Platform for healthcare providers
 3. **Technical Competency**: Full-stack development skills
 4. **Industry Relevance**: Real-world problem solving
-5. **Innovation**: AI-powered healthcare assistance
-6. **Scalability**: Cloud-based deployment
 
 The internship provided valuable experience in:
 
@@ -893,577 +912,12 @@ The internship provided valuable experience in:
 - Code development and debugging
 - Deployment and maintenance
 - Documentation and presentation
-- Team collaboration
-- Problem-solving skills
-- Time management
-
-During this internship, I gained hands-on experience with:
-
-1. **Frontend Development**: Creating responsive user interfaces using React and Tailwind CSS
-2. **Backend Development**: Building RESTful APIs using Node.js and Express
-3. **Database Management**: Understanding data structures and storage
-4. **Version Control**: Using Git and GitHub for code management
-5. **Cloud Deployment**: Deploying applications to Vercel and Render
-6. **Documentation**: Writing technical documentation
 
 The project is deployed and accessible at:
 - Frontend: https://medicare-ai-rosy.vercel.app
 - Backend: https://medicare-ai-kvon.onrender.com
 
 This internship report represents the culmination of academic learning with practical application, preparing the author for a career in software development.
-
----
-
-# CHAPTER 7: LEARNING OUTCOMES AND SKILLS ACQUIRED
-
-## 7.1 Technical Skills
-
-During this internship, I developed the following technical skills:
-
-### 7.1.1 Frontend Development
-
-- **React JS**: Proficiency in building component-based UIs
-  - State management using hooks (useState, useEffect, useContext)
-  - Routing with React Router DOM
-  - Form handling and validation
-  - Responsive design implementation
-
-- **CSS Frameworks**: Expertise in Tailwind CSS
-  - Utility-first CSS approach
-  - Custom styling and theming
-  - Responsive layouts
-  - Animation implementation
-
-- **UI/UX Design**: Understanding of user interface principles
-  - Clean and modern design patterns
-  - User experience considerations
-  - Accessibility standards
-  - Mobile-first design approach
-
-### 7.1.2 Backend Development
-
-- **Node.js**: Server-side JavaScript programming
-  - Event-driven architecture
-  - Asynchronous programming
-  - File system operations
-  - API development
-
-- **Express.js**: Web application framework
-  - RESTful API design
-  - Middleware implementation
-  - Routing and request handling
-  - Error handling strategies
-
-- **Authentication**: Security implementations
-  - JWT (JSON Web Tokens)
-  - Password hashing with bcrypt
-  - Session management
-  - Protected routes
-
-### 7.1.3 Database Concepts
-
-- **MongoDB**: NoSQL database understanding
-  - Document-based data modeling
-  - CRUD operations
-  - Data validation
-  - Indexing and queries
-
-### 7.1.4 Deployment Skills
-
-- **Vercel**: Frontend deployment
-  - Git integration
-  - Environment configuration
-  - Custom domains
-  - SSL certificates
-
-- **Render**: Backend deployment
-  - Node.js deployment
-  - Environment variables
-  - Auto-deployment
-  - Health checks
-
-## 7.2 Soft Skills
-
-### 7.2.1 Communication Skills
-
-- Ability to discuss technical concepts with team members
-- Clear documentation writing
-- Presenting project updates
-- Asking clarifying questions
-
-### 7.2.2 Problem-Solving
-
-- Debugging application errors
-- Finding solutions to technical challenges
-- Researching new technologies
-- Implementing creative solutions
-
-### 7.2.3 Time Management
-
-- Meeting project deadlines
-- Balancing multiple tasks
-- Prioritizing work
-- Efficient coding practices
-
-### 7.2.4 Teamwork
-
-- Collaborating with team members
-- Sharing knowledge
-- Code reviews and feedback
-- Supporting fellow developers
-
-## 7.3 Industry Knowledge
-
-### 7.3.1 Healthcare Technology
-
-- Understanding of healthcare digital transformation
-- Patient data privacy considerations
-- Medical ethics basics
-- Healthcare standards and regulations
-
-### 7.3.2 Software Development Lifecycle
-
-- Requirements gathering
-- Planning and estimation
-- Development and testing
-- Deployment and maintenance
-
-### 7.3.3 Professional Practices
-
-- Code quality standards
-- Documentation requirements
-- Version control workflows
-- Client communication
-
-## 7.4 Certifications Obtained
-
-During this internship, I gained knowledge that can help in obtaining the following certifications:
-
-- React Developer Certification
-- Node.js Certification
-- AWS Cloud Practitioner
-- Google Cloud Fundamentals
-- MongoDB Basics
-
----
-
-# CHAPTER 8: CHALLENGES FACED AND SOLUTIONS
-
-## 8.1 Technical Challenges
-
-### 8.1.1 API Integration
-
-**Challenge**: Connecting frontend with backend APIs
-
-**Solution**: 
-- Used Axios for HTTP requests
-- Implemented proper error handling
-- Added request/response interceptors
-- Handled CORS issues appropriately
-
-### 8.1.2 Authentication Flow
-
-**Challenge**: Managing user sessions and JWT tokens
-
-**Solution**:
-- Implemented token-based authentication
-- Stored tokens in localStorage
-- Added automatic token refresh
-- Created protected routes
-
-### 8.1.3 Responsive Design
-
-**Challenge**: Making UI work on all devices
-
-**Solution**:
-- Used Tailwind CSS responsive classes
-- Tested on multiple screen sizes
-- Implemented mobile-first approach
-- Used flexible grid layouts
-
-### 8.1.4 Deployment Issues
-
-**Challenge**: Deploying to cloud platforms
-
-**Solution**:
-- Configured environment variables
-- Set up auto-deployment
-- Fixed build errors
-- Optimized bundle size
-
-## 8.2 Non-Technical Challenges
-
-### 8.2.1 Time Management
-
-**Challenge**: Completing project within deadline
-
-**Solution**:
-- Created task lists
-- Prioritized features
-- Worked systematically
-- Regular progress reviews
-
-### 8.2.2 Documentation
-
-**Challenge**: Writing comprehensive documentation
-
-**Solution**:
-- Used standard templates
-- Included code comments
-- Created user guides
-- Documented API endpoints
-
----
-
-# APPENDIX B: SAMPLE CODE
-
-## App.jsx - Main Application Component
-
-```javascript
-import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import SplashScreen from './pages/SplashScreen';
-import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import DashboardPage from './pages/DashboardPage';
-import ProtectedRoute from './components/ProtectedRoute';
-
-function App() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  }, []);
-
-  const handleSplashComplete = () => {
-    localStorage.setItem('seenSplash', 'true');
-    setShowSplash(false);
-  };
-
-  return (
-    <div className="min-h-screen">
-      <Routes>
-        <Route path="/" element={
-          showSplash ? <SplashScreen onGetStarted={handleSplashComplete} /> : <LandingPage />
-        } />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={
-          <ProtectedRoute>
-            <DashboardPage />
-          </ProtectedRoute>
-        } />
-      </Routes>
-    </div>
-  );
-}
-
-export default App;
-```
-
-## API Configuration
-
-```javascript
-import axios from 'axios';
-
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL 
-    ? `${import.meta.env.VITE_API_URL}/api` 
-    : 'https://medicare-ai-kvon.onrender.com/api',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  timeout: 10000
-});
-
-api.interceptors.request.use((config) => {
-  try {
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-  } catch (e) {}
-  return config;
-});
-
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      try {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-      } catch (e) {}
-    }
-    return Promise.reject(error);
-  }
-);
-
-export const auth = {
-  register: (data) => api.post('/auth/register', data),
-  login: (data) => api.post('/auth/login', data),
-  getMe: () => api.get('/auth/me'),
-  updateProfile: (data) => api.put('/auth/profile', data),
-  changePassword: (data) => api.put('/auth/password', data)
-};
-
-export const doctors = {
-  getAll: (params) => api.get('/doctors', { params }),
-  getById: (id) => api.get(`/doctors/${id}`),
-  getSlots: (id, date) => api.get(`/doctors/${id}/slots`, { params: { date } }),
-  addReview: (id, data) => api.post(`/doctors/${id}/reviews`, data)
-};
-
-export const hospitals = {
-  getAll: (params) => api.get('/hospitals', { params }),
-  getById: (id) => api.get(`/hospitals/${id}`)
-};
-
-export const appointments = {
-  book: (data) => api.post('/appointments', data),
-  getAll: () => api.get('/appointments'),
-  cancel: (id) => api.put(`/appointments/${id}/cancel`)
-};
-
-export const ai = {
-  checkSymptoms: (data) => api.post('/ai/symptom-checker', data),
-  chat: (data) => api.post('/ai/chat', data)
-};
-
-export const health = {
-  addRecord: (data) => api.post('/health-records', data),
-  getAll: (params) => api.get('/health-records', { params }),
-  delete: (id) => api.delete(`/health-records/${id}`)
-};
-
-export default api;
-```
-
-## Server Setup - backend/server.js
-
-```javascript
-const express = require('express');
-const cors = require('cors');
-
-require('dotenv').config();
-
-const authRoutes = require('./routes/authRoutes');
-const hospitalRoutes = require('./routes/hospitalRoutes');
-const doctorRoutes = require('./routes/doctorRoutes');
-const appointmentRoutes = require('./routes/appointmentRoutes');
-const aiRoutes = require('./routes/aiRoutes');
-const healthRecordRoutes = require('./routes/healthRecordRoutes');
-const paymentRoutes = require('./routes/paymentRoutes');
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.get('/api/health', (req, res) => {
-  res.json({ success: true, message: 'MediCare AI API is running', timestamp: new Date().toISOString() });
-});
-
-app.use('/api/auth', authRoutes);
-app.use('/api/hospitals', hospitalRoutes);
-app.use('/api/doctors', doctorRoutes);
-app.use('/api/appointments', appointmentRoutes);
-app.use('/api/ai', aiRoutes);
-app.use('/api/health-records', healthRecordRoutes);
-app.use('/api/payment', paymentRoutes);
-
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: 'Route not found' });
-});
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ success: false, message: 'Server error' });
-});
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-module.exports = app;
-```
-
-## Auth Routes - backend/routes/authRoutes.js
-
-```javascript
-const express = require('express');
-const router = express.Router();
-const jwt = require('jsonwebtoken');
-
-const users = new Map();
-
-const generateToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET || 'medicare_secret', { expiresIn: '30d' });
-
-router.post('/register', (req, res) => {
-  const { name, email, password, phone, city } = req.body;
-  if (!name || !email || !password) {
-    return res.status(400).json({ success: false, message: 'Please provide all required fields' });
-  }
-  if (users.has(email)) {
-    return res.status(400).json({ success: false, message: 'User already exists' });
-  }
-  const user = { _id: `user_${Date.now()}`, name, email, phone, city: city || 'Mangalore', createdAt: new Date() };
-  users.set(email, { ...user, password });
-  const token = generateToken(user._id);
-  res.json({ success: true, token, user: { _id: user._id, name: user.name, email: user.email, city: user.city } });
-});
-
-router.post('/login', (req, res) => {
-  const { email, password } = req.body;
-  const user = users.get(email);
-  if (!user || user.password !== password) {
-    return res.status(401).json({ success: false, message: 'Invalid email or password' });
-  }
-  const token = generateToken(user._id);
-  res.json({ success: true, token, user: { _id: user._id, name: user.name, email: user.email, city: user.city } });
-});
-
-router.get('/me', (req, res) => {
-  const token = req.headers.authorization?.replace('Bearer ', '');
-  if (!token) return res.status(401).json({ success: false, message: 'Not authenticated' });
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'medicare_secret');
-    const user = Array.from(users.values()).find(u => u._id === decoded.id);
-    if (!user) return res.status(404).json({ success: false, message: 'User not found' });
-    res.json({ success: true, user: { _id: user._id, name: user.name, email: user.email, city: user.city } });
-  } catch {
-    res.status(401).json({ success: false, message: 'Invalid token' });
-  }
-});
-
-module.exports = router;
-```
-
----
-
-# APPENDIX C: PROJECT SCREENSHOTS DESCRIPTIONS
-
-## C.1 Landing Page
-The landing page features a gradient background with the MediCare AI logo. It includes a "Get Started" button that leads to the registration page. The page showcases key features including hospital search, doctor booking, AI symptom checker, and health records management.
-
-## C.2 Login/Register Page
-The authentication pages include email and password fields with show/hide password toggle. The registration form additionally includes name, phone, and city selection fields. Both pages maintain consistent styling with the brand theme.
-
-## C.3 Dashboard
-The user dashboard displays:
-- User profile with avatar
-- Quick action buttons (Scan Reports, AI Chat, Find Docs, Emergency)
-- Weather widget
-- BMI Calculator
-- Medication reminders
-- Recent activity
-- Health tips
-- Nearby doctors
-
-## C.4 Hospitals Page
-The hospitals page displays a list of hospitals with:
-- Hospital name and rating
-- City indicator
-- Specialties offered
-- Emergency availability flag
-- Contact information
-- Address with map link
-
-## C.5 Doctors Page
-The doctors page shows:
-- Doctor name and photo (via UI Avatar)
-- Specialization
-- Hospital affiliation
-- Consultation fee
-- Rating
-- Experience years
-- Language support
-- Online consultation availability
-
-## C.6 AI Chat
-The AI chat interface includes:
-- Message history
-- Input field with send button
-- Suggested questions
-- Typing indicator
-- Message timestamps
-
----
-
-# APPENDIX D: WEEKLY INTERNSHIP LOG
-
-## Week 1: Project Initialization
-- Project concept finalization
-- Requirements gathering
-- Technology stack selection
-- Development environment setup
-- Git repository creation
-
-## Week 2: Foundation Building
-- React app initialization
-- Tailwind CSS configuration
-- Basic routing setup
-- Component structure creation
-- API client setup
-
-## Week 3: Authentication Module
-- User registration page
-- User login page
-- JWT token implementation
-- Protected routes
-- Auth context setup
-
-## Week 4: Hospital Module
-- Hospital listing page
-- Hospital detail view
-- Search and filter functionality
-- City-based filtering
-- Data population
-
-## Week 5: Doctor Module
-- Doctor listing page
-- Doctor profile page
-- Specialization filtering
-- Fee range filtering
-- Time slot selection
-
-## Week 6: Appointment Module
-- Appointment booking flow
-- Appointment listing
-- Appointment cancellation
-- Status tracking
-
-## Week 7: AI Integration
-- Symptom checker page
-- AI chat page
-- Response handling
-- Error handling
-
-## Week 8: Testing and Deployment
-- Bug fixing
-- Performance optimization
-- Vercel deployment
-- Render deployment
-- Documentation completion
-
----
-
-*End of Extended Report*
-
-**Word Count: Approximately 8,500 words**
-
-**Pages: Approximately 105 pages**
 
 ---
 
@@ -1501,106 +955,15 @@ The AI chat interface includes:
 
 ---
 
-# APPENDICES
-
-## Appendix A: Sample Code
-
-### API Configuration (frontend/src/utils/api.js)
-
-```javascript
-import axios from 'axios';
-
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL 
-    ? `${import.meta.env.VITE_API_URL}/api` 
-    : 'https://medicare-ai-kvon.onrender.com/api',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-export const auth = {
-  register: (data) => api.post('/auth/register', data),
-  login: (data) => api.post('/auth/login', data),
-  getMe: () => api.get('/auth/me')
-};
-
-export const doctors = {
-  getAll: (params) => api.get('/doctors', { params }),
-  getById: (id) => api.get(`/doctors/${id}`)
-};
-
-export const hospitals = {
-  getAll: (params) => api.get('/hospitals', { params })
-};
-
-export const appointments = {
-  book: (data) => api.post('/appointments', data),
-  getAll: () => api.get('/appointments')
-};
-
-export const ai = {
-  checkSymptoms: (data) => api.post('/ai/symptom-checker', data),
-  chat: (data) => api.post('/ai/chat', data)
-};
-
-export default api;
-```
-
-### Server Setup (backend/server.js)
-
-```javascript
-const express = require('express');
-const cors = require('cors');
-
-const authRoutes = require('./routes/authRoutes');
-const hospitalRoutes = require('./routes/hospitalRoutes');
-const doctorRoutes = require('./routes/doctorRoutes');
-const appointmentRoutes = require('./routes/appointmentRoutes');
-const aiRoutes = require('./routes/aiRoutes');
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.use('/api/auth', authRoutes);
-app.use('/api/hospitals', hospitalRoutes);
-app.use('/api/doctors', doctorRoutes);
-app.use('/api/appointments', appointmentRoutes);
-app.use('/api/ai', aiRoutes);
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-module.exports = app;
-```
-
----
-
-## Appendix B: Sample Screenshots
-
-(Include actual screenshots of the application)
-
----
-
-## Appendix C: Project Timeline
-
-| Week | Activity |
-|------|----------|
-| Week 1 | Project planning, requirements gathering |
-| Week 2 | Setup development environment |
-| Week 3 | Frontend development - Landing, Login, Register |
-| Week 4 | Frontend development - Dashboard, Hospitals |
-| Week 5 | Frontend development - Doctors, Appointments |
-| Week 6 | Backend development - API routes |
-| Week 7 | Integration and testing |
-| Week 8 | Deployment and documentation |
-
----
-
 *End of Report*
 
-**Word Count: Approximately 5,500 words**
+**Formatted according to Yenepoya Institute guidelines**
 
-**Pages: Approximately 65 pages**
+**Margins:**
+- Left: 1.5 inch
+- Right: 1 inch
+- Top: 1 inch
+- Bottom: 1 inch
+
+**Font:** Times New Roman, 12-point
+**Line Spacing:** 1.5
