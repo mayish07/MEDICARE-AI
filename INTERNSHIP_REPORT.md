@@ -56,7 +56,7 @@ I hereby declare that this internship report titled "Web Application Development
 
 This report documents the knowledge, skills, and practical experience acquired during my internship at Perseverx Education Consultancy LLP. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in healthcare technology, web development, and AI-powered health solutions.
 
-I extend my sincere gratitude to AKSHATHA S, Project Mentor, for his valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
+I extend my sincere gratitude to AKSHTAA S, Project Mentor, for her valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
 
 Furthermore, I acknowledge the support and encouragement received from my institutional guide, **Guide Name**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
 
@@ -94,7 +94,7 @@ I sincerely express my gratitude to Yenepoya Institute of Arts, Science, Commerc
 
 I extend my heartfelt thanks to Dr. Jeevan Raj, Principal, for his continuous support and guidance in facilitating this learning opportunity. I also express my sincere appreciation to Dr. Rathnakara Shetty P, Head of Department (Computer Science), for his encouragement and academic support throughout my internship journey.
 
-I am deeply grateful to **MEDICARE AI** and **AKSHATHA S**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to AKSHATHA S, for his invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
+I am deeply grateful to **MEDICARE AI** and **AKSHATHA S**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to AKSHATHA S, for her invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
 
 I also extend my sincere gratitude to the **MEDICARE AI Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of healthcare application development and AI integration.
 
