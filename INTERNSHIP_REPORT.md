@@ -52,7 +52,7 @@ Examination held on:                    Date: ___________
 
 # DECLARATION
 
-I, **AKSHATHA S**, a student of BCA (Healthcare Technology) at Yenepoya Institute of Arts, Science, Commerce, and Management, Balmatta, Mangalore, affiliated with Yenepoya (Deemed to be University), hereby declare that this internship report titled "MediCare AI - Smart Health Assistant" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
+I, **MOHAMMED MAYISH**, a student of BCA (Healthcare Technology) at Yenepoya Institute of Arts, Science, Commerce, and Management, Balmatta, Mangalore, affiliated with Yenepoya (Deemed to be University), hereby declare that this internship report titled "MediCare AI - Smart Health Assistant" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
 
 This report documents the knowledge, skills, and practical experience acquired during my internship at MEDICARE AI. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in healthcare technology, web development, and AI-powered health solutions.
 
@@ -63,7 +63,7 @@ Furthermore, I acknowledge the support and encouragement received from my instit
 ---
 
 Intern Signature:
-Name: AKSHATHA S
+Name: MOHAMMED MAYISH
 Date: ___________
 
 Internship Supervisor Signature:
@@ -102,7 +102,7 @@ I am also thankful to my internal guide, **Guide Name**, for his academic mentor
 
 Lastly, I am grateful to my faculty mentors, family, and peers for their encouragement and motivation throughout this journey.
 
-Name/Reg No: AKSHATHA S / 23BCAICD214X
+Name/Reg No: MOHAMMED MAYISH / 23BCAICD214
 Date: ___________
 
 ---
