@@ -1,12 +1,12 @@
 # INTERNSHIP REPORT
 # ON
-# MEDICARE AI - SMART HEALTH ASSISTANT
+# WEB APPLICATION DEVELOPMENT
 
 ---
 
 ## Internship Organization:
-**MEDICARE AI**
-A Healthcare Technology Platform for Mangalore & Bangalore
+**PERSEVERX EDUCATION CONSULTANCY LLP**
+Bengaluru, Karnataka, India
 
 Under the guidance of
 **AKSHATHA S**
@@ -17,7 +17,7 @@ Submitted by
 **MOHAMMED MAYISH**
 Register No: 23BCAICD214
 BACHELOR OF COMPUTER APPLICATION
-(Specialization: Healthcare Technology)
+(Specialization: AI CC & DevOps with TCS)
 
 ---
 
@@ -29,7 +29,7 @@ Deralakatte, Mangaluru – 575018, Karnataka, India
 
 # CERTIFICATE
 
-This is to certify that the project work entitled "MediCare AI - Smart Health Assistant" has been successfully carried out at "MEDICARE AI" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (Healthcare Technology), under the supervision and guidance of **AKSHATHA S**, Guide, Department of Computer Science, at MEDICARE AI. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application by Yenepoya (Deemed to be University) during academic year 2025-26.
+This project entitled "Web Application Development - Healthcare Platform" has been successfully carried out at "Perseverx Education Consultancy LLP" by **MOHAMMED MAYISH** (Reg. No. 23BCAICD214), student of 3rd Year BCA (AI CC & DevOps with TCS), under the supervision and guidance of **AKSHATHA S**, Guide, Department of Computer Science, at Perseverx Education Consultancy LLP. This dissertation is submitted in partial fulfilment for the award of degree in Bachelor of Computer Application (AI CC & DevOps with TCS) by Yenepoya (Deemed to be University) during academic year 2025-26.
 
 
 
@@ -52,11 +52,11 @@ Examination held on:                    Date: ___________
 
 # DECLARATION
 
-I, **MOHAMMED MAYISH**, a student of BCA (Healthcare Technology) at Yenepoya Institute of Arts, Science, Commerce, and Management, Balmatta, Mangalore, affiliated with Yenepoya (Deemed to be University), hereby declare that this internship report titled "MediCare AI - Smart Health Assistant" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
+I hereby declare that this internship report titled "Web Application Development - Healthcare Platform" is a genuine and original record of the work undertaken by me as part of my academic curriculum.
 
-This report documents the knowledge, skills, and practical experience acquired during my internship at MEDICARE AI. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in healthcare technology, web development, and AI-powered health solutions.
+This report documents the knowledge, skills, and practical experience acquired during my internship at Perseverx Education Consultancy LLP. It includes methodologies, analytical processes, and investigative approaches aligned with recognized industry standards in healthcare technology, web development, and AI-powered health solutions.
 
-I extend my sincere gratitude to Mayank Agarwal, Project Mentor, for his valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to MEDICARE AI for providing an enriching environment and exposure to real-world healthcare technology operations.
+I extend my sincere gratitude to AKSHATHA S, Project Mentor, for his valuable guidance, mentorship, and support throughout the internship period. I also express my appreciation to Perseverx Education Consultancy LLP for providing an enriching environment and exposure to real-world healthcare technology operations.
 
 Furthermore, I acknowledge the support and encouragement received from my institutional guide, **Guide Name**, and the faculty of Yenepoya Institute of Arts, Science, Commerce, and Management. Their insights and assistance have been instrumental in successfully completing this internship.
 
@@ -67,7 +67,7 @@ Name: MOHAMMED MAYISH
 Date: ___________
 
 Internship Supervisor Signature:
-Name: Mayank Agarwal
+Name: AKSHATHA S
 Designation: Project Mentor
 Organization: MEDICARE AI
 Date: ___________
@@ -94,7 +94,7 @@ I sincerely express my gratitude to Yenepoya Institute of Arts, Science, Commerc
 
 I extend my heartfelt thanks to Dr. Jeevan Raj, Principal, for his continuous support and guidance in facilitating this learning opportunity. I also express my sincere appreciation to Dr. Rathnakara Shetty P, Head of Department (Computer Science), for his encouragement and academic support throughout my internship journey.
 
-I am deeply grateful to **MEDICARE AI** and **Mayank Agarwal**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to Mayank Agarwal, for his invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
+I am deeply grateful to **MEDICARE AI** and **AKSHATHA S**, for their visionary leadership and for fostering a dynamic learning environment in healthcare technology. A special note of appreciation goes to AKSHATHA S, for his invaluable mentorship, expert guidance, and for sharing his vast experience in the field of web development and AI.
 
 I also extend my sincere gratitude to the **MEDICARE AI Development Team**, for their technical insights, hands-on training, and unwavering support during my internship. Their guidance has been instrumental in enhancing my practical understanding of healthcare application development and AI integration.
 
@@ -109,11 +109,9 @@ Date: ___________
 
 # ABSTRACT
 
-The healthcare sector in India has witnessed significant transformation through digital innovation, particularly in urban centers like Mangalore and Bangalore. This internship report presents MediCare AI, a comprehensive web-based healthcare platform designed to bridge the gap between patients and healthcare providers.
+The healthcare sector in India has witnessed significant transformation through digital innovation, particularly in urban centers like Mangalore and Bangalore. This internship report presents the development of a web application designed to provide healthcare services through a digital platform. The application provides a unified platform for patients to access hospital information, doctor profiles, appointment booking, and AI-powered health assistance.
 
-MediCare AI serves as a smart health assistant that enables users to find hospitals, book appointments with doctors, access AI-powered symptom checking, and manage health records all in one place. The application integrates React for the frontend, Node.js for the backend, and simulates AI capabilities for health-related queries.
-
-During this internship, I worked on developing various features including user authentication, hospital and doctor listings, appointment booking system, AI symptom checker, and a responsive dashboard. The project was deployed using Vercel for the frontend and Render for the backend.
+During this internship, I worked on developing various features including user authentication, hospital and doctor listings, appointment booking system, and a responsive dashboard. The project was deployed using Vercel for the frontend and Render for the backend.
 
 This report documents the entire development process, from requirements gathering to deployment, along with the challenges faced and solutions implemented. The final application provides a seamless healthcare experience for users in Mangalore and Bangalore.
 
@@ -188,11 +186,11 @@ This report documents the entire development process, from requirements gatherin
 
 Healthcare in India has undergone a massive transformation in recent years, especially with the rise of digital technology. Urban centers like Mangalore and Bangalore have seen numerous hospitals and healthcare providers emerge, making it challenging for patients to find the right medical care. The traditional process of visiting hospitals physically, waiting in long queues, and manually booking appointments has become increasingly inconvenient.
 
-In response to these challenges, digital healthcare solutions have gained prominence across the country. MediCare AI represents an innovative approach to address these issues by providing a unified platform where patients can access healthcare services seamlessly.
+In response to these challenges, digital healthcare solutions have gained prominence across the country. the Healthcare Platform project represents an innovative approach to address these issues by providing a unified platform where patients can access healthcare services seamlessly.
 
-The motivation behind developing MediCare AI stems from the need to simplify healthcare access in Tier 1 and Tier 2 Indian cities. Many patients struggle to find the right doctor, compare hospital facilities, or book appointments online. Existing solutions are often fragmented, requiring patients to visit multiple websites or make numerous phone calls.
+The motivation behind developing the Healthcare Platform project stems from the need to simplify healthcare access in Tier 1 and Tier 2 Indian cities. Many patients struggle to find the right doctor, compare hospital facilities, or book appointments online. Existing solutions are often fragmented, requiring patients to visit multiple websites or make numerous phone calls.
 
-MediCare AI aims to consolidate these services into a single, user-friendly platform. The application provides access to hospitals in Mangalore and Bangalore,including renowned institutions like KMC Hospital, Father Muller Medical College Hospital, Manipal Hospital, and Fortis Hospital.
+the Healthcare Platform project aims to consolidate these services into a single, user-friendly platform. The application provides access to hospitals in Mangalore and Bangalore,including renowned institutions like KMC Hospital, Father Muller Medical College Hospital, Manipal Hospital, and Fortis Hospital.
 
 The platform addresses several key challenges in the current healthcare ecosystem:
 
@@ -239,7 +237,7 @@ The project serves as a bridge between academic learning and industry implementa
 
 ## 1.4 Scope
 
-The scope of MediCare AI includes:
+The scope of the Healthcare Platform project includes:
 
 **Features Implemented:**
 - User Registration and Login
@@ -285,7 +283,7 @@ The problem this project addresses is the fragmented nature of healthcare access
 4. **Health Records**: Paper-based records that are easily lost
 5. **Emergency Access**: No quick access to emergency services
 
-MediCare AI solves these problems by providing a comprehensive digital platform.
+the Healthcare Platform project solves these problems by providing a comprehensive digital platform.
 
 ---
 
@@ -293,7 +291,7 @@ MediCare AI solves these problems by providing a comprehensive digital platform.
 
 ## 2.1 Introduction
 
-This chapter describes the tools and technologies used in developing MediCare AI. The project utilizes a modern technology stack focused on JavaScript development, enabling rapid prototyping and easy deployment.
+This chapter describes the tools and technologies used in developing the Healthcare Platform project. The project utilizes a modern technology stack focused on JavaScript development, enabling rapid prototyping and easy deployment.
 
 ## 2.2 Frontend Technologies
 
@@ -884,7 +882,7 @@ Advanced AI features:
 
 ## 6.2 Conclusion
 
-MediCare AI successfully demonstrates a comprehensive healthcare platform built with modern web technologies. The application provides:
+the Healthcare Platform project successfully demonstrates a comprehensive healthcare platform built with modern web technologies. The application provides:
 
 1. **User Convenience**: Easy access to healthcare services
 2. **Hospital Visibility**: Platform for healthcare providers
