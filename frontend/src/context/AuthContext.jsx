@@ -51,9 +51,7 @@ export const AuthProvider = ({ children }) => {
             const response = await auth.getMe();
             setUser(response.data.user);
           } catch {
-            removeStorage('token');
-            removeStorage('user');
-            setToken(null);
+            setUser(JSON.parse(storedUser));
           }
         }
       }

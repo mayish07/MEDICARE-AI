@@ -66,7 +66,7 @@ const DashboardPage = () => {
         const response = await appointmentsApi.getAll();
         setAppointmentsList(response.data.appointments || []);
       } catch (error) {
-        console.log('No appointments found');
+        console.log('No appointments found', error.message);
       } finally {
         setLoading(false);
       }
