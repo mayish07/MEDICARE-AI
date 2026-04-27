@@ -6,7 +6,8 @@ const api = axios.create({
     : 'https://medicare-ai-kvon.onrender.com/api',
   headers: {
     'Content-Type': 'application/json'
-  }
+  },
+  timeout: 10000
 });
 
 api.interceptors.request.use((config) => {
