@@ -1107,73 +1107,184 @@ Doctor: { _id, name, specialization, qualification, experience, city, hospital, 
 
 ### 5.2.1 Main Application Flow
 
+The main application flow demonstrates the user journey through the Healthcare Platform. Understanding this flow is crucial for both developers and stakeholders. The flow begins when users land on the homepage, where they are presented with an option to either explore the platform or log in. Unauthenticated users can view hospitals and doctors but cannot book appointments. The authentication process redirects users to the dashboard upon successful login. From the dashboard, users can navigate to various features including hospital browsing, doctor searching, appointment booking, and AI-powered features. Each navigation path is designed to be intuitive and requires minimal steps to reach any feature.
+
+The detailed flow begins at the Landing Page, which serves as the entry point for the application. Users arriving at the landing page can view the key features of the platform and have the option to get started. Clicking the "Get Started" button either redirects to the registration page or prompts login if the user is already authenticated. The registration process requires users to provide basic information including name, email, password, and optional city preference, after which successful registration redirects users to the dashboard. The login process verifies user credentials and generates JWT tokens for session management. The dashboard serves as the central hub for all authenticated user activities, providing quick access to all platform features through intuitive navigation and clear visual hierarchy.
+
 ```
-Landing Page --> Login/Register --> Dashboard
-                              |
-                              v
-                         Hospitals --> Doctors --> Book Appointment
-                         |
-                         v
-                      AI Chat --> Symptom Checker
+User Journey Flow:
+Step 1: User lands on Landing Page
+Step 2: User clicks "Get Started" button
+Step 3: System checks for existing session
+Step 4a (No session): Redirect to Registration/Login
+Step 4b (Has session): Redirect to Dashboard
+Step 5: User registers with name, email, password
+Step 6: System creates account and generates token
+Step 7: User redirected to Dashboard
+Step 8: User can now access all features
+Step 9: User browses hospitals/doctors
+Step 10: User selects doctor for appointment
+Step 11: User selects available time slot
+Step 12: User confirms booking
+Step 13: System creates appointment record
+Step 14: Confirmation displayed to user
 ```
 
-### 5.2.2 API Endpoints
+### 5.2.2 Complete API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/auth/register | Register new user |
-| POST | /api/auth/login | User login |
-| GET | /api/auth/me | Get current user |
-| GET | /api/hospitals | List hospitals |
-| GET | /api/doctors | List doctors |
-| POST | /api/appointments | Book appointment |
-| GET | /api/appointments | User appointments |
-| POST | /api/ai/symptom-checker | Check symptoms |
-| POST | /api/ai/chat | AI chat |
+The API architecture follows RESTful principles with proper HTTP method usage and status codes. Each endpoint is designed to handle specific operations and return appropriate responses. The API handles authentication, hospital and doctor data management, appointment operations, and AI-powered features. All endpoints follow consistent response patterns and error handling conventions.
+
+| Method | Endpoint | Request Body | Response | Description |
+|--------|----------|--------------|----------|-------------|
+| POST | /api/auth/register | {name, email, password, phone, city} | {success, token, user} | Creates new user account |
+| POST | /api/auth/login | {email, password} | {success, token, user} | Authenticates user |
+| GET | /api/auth/me | None | {success, user} | Returns current user profile |
+| PUT | /api/auth/profile | {name, phone, city} | {success, user} | Updates user profile |
+| PUT | /api/auth/password | {oldPassword, newPassword} | {success, message} | Changes user password |
+| GET | /api/hospitals | None | {success, hospitals, count} | Returns all hospitals |
+| GET | /api/hospitals?city=Bangalore | city query param | {success, hospitals} | Filters hospitals by city |
+| GET | /api/hospitals/:id | None | {success, hospital} | Returns specific hospital |
+| GET | /api/doctors | None | {success, doctors, total} | Returns all doctors |
+| GET | /api/doctors?city=Mangalore&specialization=Cardiology | query params | {success, doctors} | Filters doctors |
+| GET | /api/doctors/:id | None | {success, doctor} | Returns specific doctor |
+| GET | /api/doctors/:id/slots?date=2024-01-01 | date param | {success, slots} | Returns available slots |
+| POST | /api/doctors/:id/reviews | {rating, review} | {success, review} | Adds doctor review |
+| POST | /api/appointments | {doctorId, date, time, type} | {success, appointment} | Books new appointment |
+| GET | /api/appointments | None | {success, appointments} | Returns user appointments |
+| PUT | /api/appointments/:id/cancel | None | {success, message} | Cancels appointment |
+| POST | /api/ai/symptom-checker | {symptoms} | {success, result} | Analyzes symptoms |
+| POST | /api/ai/chat | {messages} | {success, message} | AI chat response |
+| GET | /api/health-records | None | {success, records} | Returns health records |
+| POST | /api/health-records | {type, description, file} | {success, record} | Adds health record |
+| DELETE | /api/health-records/:id | None | {success, message} | Deletes health record |
+| POST | /api/payment/create-order | {amount} | {success, order} | Creates payment order |
+| POST | /api/payment/verify | {orderId, paymentId} | {success, message} | Verifies payment |
+
+### 5.2.3 Data Flow Diagram
+
+The data flow diagram illustrates how data moves through the system from user requests to database storage and back. Understanding this flow is essential for debugging and optimization. The diagram shows the complete data journey, starting from user input through API requests, backend processing, and data storage. Response data follows a similar path in reverse, from database through backend processing to the frontend for display.
+
+```
+HTTP Request
+    |
+    v
+Client (React Frontend)
+    |
+    v (Axios API Call)
+API Request (JSON)
+    |
+    v
+Load Balancer (Vercel/Render)
+    |
+    v
+Express Server (Node.js)
+    |
+    v (Middleware)
+Authentication Check
+    |
+    v (Route Handler)
+Business Logic
+    |
+    v
+Data Processing
+    |
+    v (In-Memory Storage)
+Database (MongoDB Atlas - Future)
+    |
+    v
+Response (JSON)
+    |
+    v
+Express Server
+    |
+    v
+Client (React Frontend)
+    |
+    v (State Update)
+UI Update (React Rendering)
+```
 
 ## 5.3 Module Description
 
 ### 5.3.1 Authentication Module
 
-**Features:**
-- User registration with email validation
-- Secure login with password hashing
-- JWT token-based authentication
-- Session persistence
+The authentication module is the foundation of the Healthcare Platform's user management system. It handles all user-related operations including registration, login, profile management, and security. The module employs industry-standard security practices including JWT tokens for session management and bcrypt for password hashing. The authentication flow is designed to be secure while providing a smooth user experience. The module integrates with the frontend through React Context, providing authentication state throughout the application.
+
+**Core Features:**
+The authentication module provides comprehensive user management capabilities. User registration validates email formats and ensures password strength requirements are met before creating accounts. Secure login verifies credentials and generates JWT tokens valid for 30 days. The JWT tokens include user identification information encoded securely, allowing stateless authentication on the backend. Session persistence through localStorage enables users to remain logged in across browser sessions. Profile management allows users to update their information including name, phone, and city preferences. The password change feature requires the old password for security before setting a new password.
+
+**Technical Implementation:**
+The authentication module uses bcryptjs for secure password hashing with salt rounds that balance security and performance. JWT tokens are generated using the jsonwebtoken library with configurable expiration. Token verification happens on every protected API request through middleware. Error handling provides appropriate messages for different authentication failures. Rate limiting prevents brute-force attacks on login endpoints.
 
 **Files:**
-- `backend/routes/authRoutes.js`
-- `frontend/src/context/AuthContext.jsx`
+- `backend/routes/authRoutes.js` - Contains all authentication route handlers including registration, login, profile management, and password change endpoints. The file includes JWT token generation and verification logic.
+- `frontend/src/context/AuthContext.jsx` - React Context provider that manages authentication state globally. Provides login, logout, register functions and user state to all components.
+- `frontend/src/hooks/useAuth.js` - Custom hook for easy access to authentication context in components.
 
 ### 5.3.2 Hospital Module
 
-**Features:**
-- List all hospitals
-- Filter by city
-- View hospital details
-- Emergency contact information
+The hospital module provides comprehensive access to healthcare facility information across Mangalore and Bangalore. Patients can search, filter, and view detailed information about each hospital. The module includes emergency service indicators and contact information for quick access during emergencies. Hospital data is stored efficiently to enable fast searches and filters.
+
+**Core Features:**
+The module provides complete hospital listings with pagination for performance. Users can filter hospitals by city (Mangalore or Bangalore) to find nearby options. Search functionality allows finding hospitals by name. Each hospital profile includes comprehensive information including address, phone, specialties, ratings, and emergency availability. Emergency contacts are prominently displayed for quick access during critical situations.
+
+**Technical Implementation:**
+Hospital data is stored in-memory with structured schemas for consistent access. Search uses efficient filtering algorithms optimized for quick responses. Pagination splits results into manageable chunks to prevent performance issues with large datasets. Static hospital data ensures reliability without database dependencies. The module exports both raw hospital data and computed fields like emergency status indicators.
 
 **Files:**
-- `backend/routes/hospitalRoutes.js`
-- `frontend/src/pages/HospitalsPage.jsx`
+- `backend/routes/hospitalRoutes.js` - Contains hospital endpoints for listing and detailed retrieval.
+- `frontend/src/pages/HospitalsPage.jsx` - React component displaying hospital listings with filters.
+- `frontend/src/components/HospitalCard.jsx` - Reusable component for displaying hospital information.
 
 ### 5.3.3 Doctor Module
 
-**Features:**
-- List all doctors
-- Filter by city, specialty, fee
-- View doctor profiles
-- Available time slots
+The doctor module enables patients to find and book appointments with healthcare specialists. Doctors can be searched and filtered by multiple criteria including location, specialty, and consultation fees. Each doctor profile shows qualifications, experience, languages spoken, and availability for both in-person and online consultations.
+
+**Core Features:**
+Complete doctor directory with detailed profiles for all specialists. Multi-criteria filtering enables finding doctors by city, medical specialty, and consultation fee range. Doctor profiles include qualification details, years of experience, associated hospital, consultation fees, and patient ratings. Language capabilities help patients find doctors who communicate in their preferred language. Online consultation indicators show availability for virtual appointments.
+
+**Search and Filtering:**
+The advanced search functionality enables finding specialists based on specific requirements. City filtering narrows results to the patient's location. Specialty filtering finds doctors in required medical departments. Fee range filtering enables budget-conscious selections. The combination of filters provides powerful search capabilities.
+
+**Technical Implementation:**
+Doctor data includes computed fields like overall ratings derived from individual reviews. Time slot management enables booking systems to display only available appointments. Dynamic slots generation ensures accurate availability information. Review aggregation provides reliable overall ratings.
 
 **Files:**
-- `backend/routes/doctorRoutes.js`
-- `frontend/src/pages/DoctorsPage.jsx`
+- `backend/routes/doctorRoutes.js` - Contains doctor endpoints for listing, detailed views, and slot management.
+- `frontend/src/pages/DoctorsPage.jsx` - Main doctor listing page with search and filters.
+- `frontend/src/pages/DoctorProfilePage.jsx` - Detailed doctor profile view.
+- `frontend/src/components/DoctorCard.jsx` - Reusable card component for doctor listings.
 
 ### 5.3.4 Appointment Module
 
-**Features:**
-- Book appointments
-- View appointment history
+The appointment module handles the complete booking lifecycle from slot selection through confirmation. Patients can book, view, and cancel appointments through an intuitive interface. The module integrates with doctor availability to show real-time slot options.
+
+**Core Features:**
+The booking flow guides users through selecting doctors, choosing available dates and times, and confirming appointments. Users can view their complete booking history with current status and past appointments. Cancellation allows users to free up slots for other patients. Booking confirmation emails (simulated) provide appointment details.
+
+**Appointment States:**
+Appointments progress through various states: Pending confirmation when initially booked, Confirmed when approved by the system, Completed after the appointment time passes, and Cancelled when users cancel or mark as complete. Status tracking provides clear visibility into appointment timelines.
+
+**Technical Implementation:**
+Each appointment record includes patient ID, doctor ID, selected date and time, appointment type (in-person or video consultation), and current status. The booking system prevents double-booking of same slots. Time zones are handled consistently to prevent confusion.
+
+**Files:**
+- `backend/routes/appointmentRoutes.js` - Endpoints for booking creation, listing, and cancellation.
+- `frontend/src/pages/BookAppointmentPage.jsx` - Multi-step booking flow.
+- `frontend/src/pages/AppointmentsPage.jsx` - User's appointment dashboard.
+
+### 5.3.5 AI Module
+
+The AI module provides intelligent healthcare assistance through symptom analysis and health queries. The symptom checker analyzes user-described symptoms to suggest possible conditions and recommended actions. The health chat provides conversational responses to medical queries.
+
+**Symptom Checker Features:**
+Users describe their symptoms through natural language input. The AI analyzes patterns to suggest potential conditions. Severity assessment provides urgency indicators for when immediate medical attention is needed. Home remedy suggestions provide initial care guidance. Specialist recommendations suggest which type of doctor to consult.
+
+**Health Chat Features:**
+Conversational AI responds to health-related questions. Context-aware responses maintain conversation history. Pre-programmed responses cover common health topics. Fallback responses guide users to professional consultation for serious concerns.
+
+**Implementation:**
+The AI module uses rule-based analysis for symptom checking rather than actual machine learning. Response mapping covers common symptoms and conditions. Emergency keyword detection triggers urgent warning messages. The module is designed for future enhancement with actual AI/ML integration.
 - Cancel appointments
 - Status tracking
 
