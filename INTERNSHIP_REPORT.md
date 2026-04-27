@@ -67,9 +67,9 @@ Name: MOHAMMED MAYISH
 Date: ___________
 
 Internship Supervisor Signature:
-Name: AKSHATHA S
-Designation: Project Mentor
-Organization: MEDICARE AI
+Name: Mithun
+Designation: Internship Head
+Organization: Perseverx Education LLP
 Date: ___________
 
 ---
