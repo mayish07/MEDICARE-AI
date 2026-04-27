@@ -8,10 +8,7 @@ import { ai } from '../utils/api';
 import { useAuth } from '../hooks/useAuth';
 
 const AIChatPage = () => {
-  const [messages, setMessages] = useState(() => {
-    const saved = localStorage.getItem('chatHistory');
-    return saved ? JSON.parse(saved) : [{ role: 'assistant', content: 'Hello! I\'m MediCare AI. How can I help you with your health today?' }];
-  });
+  const [messages, setMessages] = useState([{ role: 'assistant', content: "Hello! I'm MediCare AI. How can I help you with your health today?" }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -19,7 +16,9 @@ const AIChatPage = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    localStorage.setItem('chatHistory', JSON.stringify(messages));
+    try {
+      localStorage.setItem('chatHistory', JSON.stringify(messages));
+    } catch (e) {}
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
