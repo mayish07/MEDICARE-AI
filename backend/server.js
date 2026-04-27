@@ -30,11 +30,12 @@ app.use('/api/health-records', healthRecordRoutes);
 app.use('/api/payment', paymentRoutes);
 
 app.use((req, res) => {
-  res.status(404).json({ success: false, message: 'Route not found' });
+  console.log('404:', req.method, req.url);
+  res.status(404).json({ success: false, message: 'Route not found', path: req.url });
 });
 
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('ERROR:', err.stack);
   res.status(500).json({ success: false, message: 'Server error' });
 });
 
@@ -42,6 +43,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log('Routes registered: /api/auth, /api/hospitals, /api/doctors, /api/appointments, /api/ai, /api/health-records, /api/payment');
 });
 
 module.exports = app;
